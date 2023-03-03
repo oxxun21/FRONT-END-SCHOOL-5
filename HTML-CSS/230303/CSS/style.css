@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "IBM Plex Sans KR";
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Noto Serif KR', serif;
+  color: #fff;
+  position: relative;
+}
+
+img {
+  width: 50rem;
+}
+
+h1 {
+  line-height: 1.5;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-size: 3rem;
+}
+
+p {
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  font-size: 2rem;
+}
+
+#star {
+  position: absolute;
+  top: 50px;
+  left: 600px;
+  font-size: 3rem;
+}
+
+.star {
+  position: absolute;
+  top: 25px;
+  left: 680px;
+  font-size: 2rem;
+}
