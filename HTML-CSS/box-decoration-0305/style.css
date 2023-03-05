@@ -1,0 +1,43 @@
+div {
+  width: 8rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+.box1 {
+  background-color: #343F50;
+  color: white;
+  border: 10px inset #4A5568;
+  line-height: 1.8;
+}
+
+.box2 {
+  height: 4rem;
+  position: relative;
+  border: 6px dashed #E6D6FF;
+  border-radius: 35px;
+  line-height: 2.8;
+}
+
+.box2-inner {
+  width: 7.5rem;
+  height: 3.5rem;
+  position: absolute;
+  bottom: -18px;
+  left: -2px;
+  border-radius: 35px;
+  color: white;
+
+  background: linear-gradient(90deg, rgba(138,75,245,1) 0%, rgba(100,89,243,1) 35%, rgba(54,107,242,1) 100%);
+}
+
+.box3 {
+  border: 1px solid #E5E5E5;
+  box-shadow: 5px 5px 5px #E5E5E5;
+  border-radius: 0 35px 35px 35px;
+  line-height: 2.7;
+}
