@@ -24,6 +24,11 @@ div {
   background-clip: padding-box;
 }
 
+/* 
+background는 단축 속성이기 때문에 개별 속성이 무조건 뒤로 와야함
+background-color는 단일값만 사용 가능하기 때문에 gradient는 background 속성으로 줘야함 
+*/
+
 .box3 {
   border: 1px solid #E5E5E5;
   box-shadow: 5px 5px 5px #E5E5E5;
