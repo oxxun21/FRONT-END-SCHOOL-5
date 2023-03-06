@@ -1,0 +1,120 @@
+body {
+  background: #eee;
+}
+
+section {
+  margin: 50px;
+  display: inline-block;
+}
+
+article {
+  width: 30rem;
+  height: 35rem;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+article img {
+  width: 100%;
+  height: 20rem;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+article h2, p, button {
+  padding: 0 30px;
+}
+
+article p {
+  display: block;
+  text-align: justify;
+  height: 65px;
+  /* overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis; */
+}
+
+article button {
+  border: none;
+  font-size: 1.5rem;
+  background: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+article:last-child {
+  position: relative;
+}
+
+.selfImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 20px 0 15px 20px;
+}
+
+.part2h2 {
+  position: absolute;
+  height: 19px;
+  left: 70px;
+  top: 6px;
+  font-size: 23px;
+}
+
+article span {
+  position: absolute;
+  height: 14px;
+  left: 100px;
+  right: 0px;
+  top: 56px;
+}
+
+.centerImg {
+  height: 17rem;
+  object-fit: cover;
+}
+
+.heart {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  right: 25%;
+  top: 480px;
+}
+
+.share {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  right: 15%;
+  top: 480px;
+}
+
+.more {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  right: 5%;
+  top: 480px;
+}
+
+.btn {
+  position: relative;
+}
+
+.btn::after {
+  position: absolute;
+  left: 120px; 
+  top: 7px; 
+  content: '';
+  width: 10px; 
+  height: 10px; 
+  border-top: 5px solid #000;
+  border-right: 5px solid #000; 
+  transform: rotate(45deg); 
+}
