@@ -16,23 +16,12 @@ div {
 }
 
 .box2 {
-  height: 4rem;
-  position: relative;
-  border: 6px dashed #E6D6FF;
+  border: 5px dashed #E6D6FF;
   border-radius: 35px;
-  line-height: 2.8;
-}
-
-.box2-inner {
-  width: 7.5rem;
-  height: 3.5rem;
-  position: absolute;
-  bottom: -18px;
-  left: -2px;
-  border-radius: 35px;
+  line-height: 2.2;
   color: white;
-
   background: linear-gradient(90deg, rgba(138,75,245,1) 0%, rgba(100,89,243,1) 35%, rgba(54,107,242,1) 100%);
+  background-clip: padding-box;
 }
 
 .box3 {
