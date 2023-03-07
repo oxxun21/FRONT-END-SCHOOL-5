@@ -1,0 +1,154 @@
+/* float 사용 */
+
+/* #wrap {
+  width: 50rem;
+  height: auto;
+  background-color: #466FA6;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  background: #96C9F2;
+  margin-bottom: 1rem;
+  line-height: 4;
+  color: #fff;
+}
+
+section {
+  float: left;
+  width: 68%;
+  height: 60%;
+  background-color: #485373;
+  line-height: 12;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+aside {
+  float: right;
+  width: 30%;
+  height: 60%;
+  background-color: #C7F544;
+  margin-bottom: 1rem;
+  line-height: 12;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  height: 20%;
+  background: #FF7769;
+  line-height: 4;
+  color: #fff;
+  margin-top: 1rem;  (마진 병합 해결 코드 추가해야함)
+} */
+
+
+/* flex 사용 */
+
+/* #wrap {
+  width: 50rem;
+  height: auto;
+  background-color: #466FA6;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  background: #96C9F2;
+  margin-bottom: 1rem;
+  line-height: 4;
+  color: #fff;
+}
+
+section {
+  width: 68%;
+  height: 60%;
+  background-color: #485373;
+  line-height: 12;
+  margin-bottom: 1rem;
+  flex-direction: row; 
+  color: #fff;
+}
+
+aside {
+  width: 30%;
+  height: 60%;
+  background-color: #C7F544;
+  margin-bottom: 1rem;
+  line-height: 12;
+  flex-direction: row; 
+}
+
+footer {
+  width: 100%;
+  height: 20%;
+  background: #FF7769;
+  line-height: 4;
+  color: #fff;
+} */
+
+/* grid 사용 */
+
+#wrap {
+  width: 50rem; 
+  background-color: #466FA6;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+
+  display: grid;
+  grid-template-columns: 29rem 20rem;
+  grid-template-rows: 8rem 20rem 8rem;
+  grid-gap: 1rem; 
+}
+
+.item1 {
+  grid-column: 1 / 3;
+  background: #96C9F2;
+  line-height: 4;
+  color: #fff;
+}
+
+.item2 {
+  grid-column: 1 / 2;
+  background-color: #485373;
+  line-height: 10;
+  color: #fff;
+}
+
+.item3 {
+  grid-column: 2 / 3;
+  background-color: #C7F544;
+  line-height: 10;
+}
+
+.item4 {
+  grid-column: 1 / 3;
+  background: #FF7769;
+  line-height: 4;
+  color: #fff;
+}
