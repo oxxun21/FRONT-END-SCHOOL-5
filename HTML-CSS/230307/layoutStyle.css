@@ -54,7 +54,7 @@ footer {
 
 /* flex 사용 */
 
-/* #wrap {
+#wrap {
   width: 50rem;
   height: auto;
   background-color: #466FA6;
@@ -87,7 +87,6 @@ section {
   background-color: #485373;
   line-height: 12;
   margin-bottom: 1rem;
-  flex-direction: row; 
   color: #fff;
 }
 
@@ -97,7 +96,6 @@ aside {
   background-color: #C7F544;
   margin-bottom: 1rem;
   line-height: 12;
-  flex-direction: row; 
 }
 
 footer {
@@ -106,11 +104,11 @@ footer {
   background: #FF7769;
   line-height: 4;
   color: #fff;
-} */
+}
 
 /* grid 사용 */
 
-#wrap {
+/* #wrap {
   width: 50rem; 
   background-color: #466FA6;
   margin: 0 auto;
@@ -151,4 +149,4 @@ footer {
   background: #FF7769;
   line-height: 4;
   color: #fff;
-}
+} */
