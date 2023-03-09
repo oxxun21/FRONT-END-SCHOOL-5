@@ -2,14 +2,24 @@ body {
   background: #eee;
 }
 
-section {
+/* grid */
+/* section {
   margin: 2rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* 반응형 */
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); 반응형 
+} */
+
+/* flex */
+section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap
 }
 
 article {
+  width: 25rem;  /* flex 사용 시 지정 */
   height: 30rem;
   background: #fff;
   box-sizing: border-box;
@@ -46,3 +56,5 @@ article button {
   text-decoration: underline;
   margin-top: 10px;
 }
+
+
