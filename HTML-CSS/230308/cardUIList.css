@@ -46,8 +46,14 @@ section {
   width: min(1200px, calc(100% - 80px)); 
 } 
 
+section::after{
+  content: '';
+  display: block;
+  clear: left;
+}
+
 article {
-  width: 20rem;
+  width: 21rem;
   height: 25rem;
   background: #fff;
   box-sizing: border-box;
@@ -55,7 +61,7 @@ article {
   box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   float: left;
-  margin: 1rem;
+  margin: 2rem;
 }
 
 article img {
