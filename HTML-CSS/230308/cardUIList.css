@@ -7,10 +7,10 @@ section {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* 반응형 */
-  grid-template-rows: repeat(2, 30rem);  /* 반복횟수, 사이즈 */
 }
 
 article {
+  height: 30rem;
   background: #fff;
   box-sizing: border-box;
   border-radius: 20px;
