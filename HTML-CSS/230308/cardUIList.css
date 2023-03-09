@@ -6,13 +6,12 @@ section {
   margin: 50px;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(4, 22rem);  /* 반복횟수, 사이즈 */
-  grid-template-rows: 30rem 30rem 
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* 반응형 */
+  grid-template-rows: repeat(2, 30rem);  /* 반복횟수, 사이즈 */
+  
 }
 
 article {
-  /* width: 30rem;
-  height: 35rem; */
   background: #fff;
   box-sizing: border-box;
   border-radius: 20px;
