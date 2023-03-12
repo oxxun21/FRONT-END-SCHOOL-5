@@ -4,24 +4,33 @@ body, h1 {
 
 .wrap {
   width: auto;
-  height: 100vh;
+  height: auto;
   background-image: url(./images/bg.png);
   background-size: cover;
 }
 
+.section {
+  width: min(1200px, calc(100% - 80px));
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+
 .content {
-  width: 350px;
+  width: 250px;
   margin: auto;
   color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
 }
 
 .content > img {
   margin: auto;
   display: block;
+  width: 70%;
 }
 
 .grass {
