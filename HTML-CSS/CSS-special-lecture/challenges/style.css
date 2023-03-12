@@ -1,0 +1,38 @@
+body, h1 {
+  margin: 0;
+}
+
+.wrap {
+  width: auto;
+  height: 100vh;
+  background-image: url(./images/bg.png);
+  background-size: cover;
+}
+
+.content {
+  width: 350px;
+  margin: auto;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content > img {
+  margin: auto;
+  display: block;
+}
+
+.grass {
+  background-image: url(./images/green.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+}
+
+.text {
+  background-color: #8A5227;
+  border-radius: 0 0 30px 30px;
+  padding: 20px;
+}
