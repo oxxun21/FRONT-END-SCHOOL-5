@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition, animation 보충</title>
+    <style>
+      .animation-box {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        animation-name: box_ani;  /* 이름 지정 */
+        animation-duration: 2s;   /* 실행 시간 */
+        animation-iteration-count: 3;   /* 반복 횟수 */
+        animation-direction: alternate; /* 애니메이션 방향 */
+        animation-delay: 2s;    /* 지연 시간 */
+        animation-timing-function: linear;    /* 가속도 */
+        animation-fill-mode: forwards;    /* 애니메이션 끝난 후 상태(위치) */
+      }
+
+      @keyframes box_ani {
+        /* 시작 지점 */
+        from {
+          margin-left: 0;
+        } 
+        /* 끝 지점 */
+        to {
+          margin-left: 200px;
+        }
+      }
+
+      /* 자연스럽게 둘 다 적용시 직접적인 엘리먼트에 transition 넣기 */
+      /* 마우스를 올렸을 때만 적용 시 hover 이벤트에 transition 넣기 */
+      .transition-box {
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: cornflowerblue;
+
+        transition-duration: 0.5s; /* 변하는 시간 */
+        transition-timing-function: ease-in-out; /* 가속도 */
+      }
+      
+      .transition-box:hover {
+        width: 500px;
+        background-color: gold;
+        /* transition-duration: 0.5s; 마우스를 떼는 순간 효과가 바로 사라짐 */
+        /* transition-delay: 1s; 지연 시간 */
+      }
+
+      .btn_wrap {
+        margin-top: 20px;
+        width: 400px;
+        height: 100px;
+        border: 3px solid navy;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .gage {
+        width: 0;
+        height: 100%;
+        background-color: navy;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+
+      .btn_wrap h3 {
+        position: relative;
+        text-align: center;
+        line-height: 50px;
+        font-size: 26px;
+      }
+
+      .btn_wrap:hover .gage {
+        width: 100%;
+      }
+      
+      .btn_wrap h3 {
+        transition-duration: 0.5s;
+      }
+
+      .btn_wrap:hover h3 {
+        color: #fff;
+      }
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+  <div class="animation-box"></div>
+  <div class="transition-box"></div>
+
+  <div class="btn_wrap">
+    <div class="gage"></div>
+    <h3>더보기 &rarr;</h3>
+  </div>
+
+  <!-- JavaScript -->
+  <script src=""></script>
+</body>
+</html>
