@@ -1,0 +1,117 @@
+body {
+  background-color:darksalmon;
+}
+
+.wrap {
+  margin: 150px auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  width: 400px;
+  height: 400px; 
+  position: relative;
+}
+
+.main {
+  background-color: saddlebrown;
+  width: 400px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.left-ear {
+  background-color: saddlebrown;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  overflow: hidden;
+}
+
+.right-ear {
+  background-color: saddlebrown;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: right;
+  overflow: hidden;
+}
+
+.ear-inner {
+  width: 70px;
+  height: 70px;
+  background-color: hotpink;
+  border-radius: 45%;
+}
+
+.eyes-left {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.eyes-right {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  background-color: bisque;
+  border-radius: 80%;
+}
+
+.nose {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 75px;
+  background-color: chocolate;
+  border-radius: 80%;
+}
+
+.lips {
+  width: 100px;
+  height: 10px;
+  background-color: crimson;
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  border-radius: 10px;
+}
+
+.blusher-left {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 160px;
+  left: 75px;
+  background-color: deeppink;
+  border-radius: 80%;
+}
+
+.blusher-right {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 160px;
+  right: 75px;
+  background-color: deeppink;
+  border-radius: 80%;
+}
