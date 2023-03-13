@@ -1,0 +1,54 @@
+[class^="btn"] {
+  width: 88px;
+  height: 32px;
+
+  background-color: #343F50;
+  box-shadow: inset 1px 1px #4a5568;
+  border: 1px solid #1a202c;
+  color: #ffffffb0;
+  margin: 5px;
+}
+
+[class^="btn"]:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px #262f3e;
+}
+
+.btn:disabled {
+  color: #ffffff2e;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+}
+
+.btn-yes {
+  color: #439AFF;
+}
+
+.btn-yes:hover, .btn-yes:active {
+  background-color: #439AFF;
+  border: 1px solid #439aff;
+  box-shadow: inset 1px 1px #73b4ff;
+}
+
+.btn-yes:active {
+  box-shadow: inset 1px 1px #3b78be;
+}
+
+.btn-del {
+  color: #EB5757;
+}
+
+.btn-del:hover, .btn-del:active {
+  background-color: #EB5757;
+  border: 1px solid #eb5757;
+  box-shadow: inset 1px 1px #ff7a7a;
+}
+
+.btn-del:active {
+  box-shadow: inset 1px 1px #b94444;
+}
