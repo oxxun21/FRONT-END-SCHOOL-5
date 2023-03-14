@@ -19,7 +19,6 @@
 }
 
 .line {
-  width: 100%;
   display: block;   
   /* display: block을 줘야 부모의 높이값이 생기기 때문에 transform이 적용 */
   transition: all 0.3s;
