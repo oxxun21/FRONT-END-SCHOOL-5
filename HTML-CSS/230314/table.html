@@ -9,6 +9,7 @@
       table {
         border: 2px solid #000;
         border-collapse: collapse;
+        margin-top: 50px;
       }
 
       caption {
@@ -40,29 +41,29 @@
   <thead>
     <tr>
       <th>구분</th>
-      <th rowspan="2">한국사 영역</th>
+      <th scope="col" rowspan="2">한국사 영역</th>
       <!-- <th>셀 제목</th> -->
-      <th>국어 영역</th>
-      <th>수학 영역</th>
-      <th rowspan="2">영어 영역</th>
+      <th scope="col">국어 영역</th>
+      <th scope="col">수학 영역</th>
+      <th scope="col" rowspan="2">영어 영역</th>
       <!-- <th>셀 제목</th> -->
-      <th colspan="2">탐구 영역</th>
-      <th>제 2 외국어/한문 영역</th>
+      <th scope="colgroup" colspan="2">탐구 영역</th>
+      <th scope="col">제 2 외국어/한문 영역</th>
     </tr>
     <tr>
-      <th>선택과목</th>
+      <th scope="row">선택과목</th>
       <!-- <th>셀 제목</th> -->
-      <th>화법과 작문</th>
-      <th>확률과 통계</th>
+      <th scope="col">화법과 작문</th>
+      <th scope="col">확률과 통계</th>
       <!-- <th>셀 제목</th> -->
-      <th>생활과 윤리</th>
-      <th>지구과학 1</th>
-      <th>독일어</th>
+      <th scope="col">생활과 윤리</th>
+      <th scope="col">지구과학 1</th>
+      <th scope="col">독일어</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>표준점수</th>
+      <th scope="row">표준점수</th>
       <td rowspan="2">&nbsp;</td> <!-- 공백 -->
       <td>131</td>
       <td>137</td>
@@ -72,7 +73,7 @@
       <td rowspan="2">&nbsp;</td>
     </tr>
     <tr>
-      <th>백분위</th>
+      <th scope="row">백분위</th>
       <!-- <td>셀 내용</td> -->
       <td>93</td>
       <td>95</td>
@@ -84,7 +85,61 @@
   </tbody>
   <tfoot>
     <tr>
-      <th>등급</th>
+      <th scope="row">등급</th>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+  </tfoot>
+</table>
+
+<table>
+  <caption>2023 학년도 대학수능능력시험 성적통지표</caption>
+  <thead>
+    <tr>
+      <th id="col1">구분</th>
+      <th id="col2" rowspan="2">한국사 영역</th>
+      <th id="col3">국어 영역</th>
+      <th id="col4">수학 영역</th>
+      <th id="col5" rowspan="2">영어 영역</th>
+      <th id="col6" colspan="2">탐구 영역</th>
+      <th id="col7">제 2 외국어/한문 영역</th>
+    </tr>
+    <tr>
+      <th id="col11">선택과목</th>
+      <th id="col31">화법과 작문</th>
+      <th id="col41">확률과 통계</th>
+      <th id="col61">생활과 윤리</th>
+      <th id="col62">지구과학 1</th>
+      <th id="col71">독일어</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="row1">표준점수</th>
+      <td headers="col2 row1" rowspan="2">&nbsp;</td>
+      <td headers="col3 col31 row1">131</td>
+      <td headers="col4 col41 row1">137</td>
+      <td headers="col5 row1" rowspan="2">&nbsp;</td>
+      <td headers="col6 col61 row1">53</td>
+      <td headers="col6 col62 row1">64</td>
+      <td headers="col7 col71 row1" rowspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <th id="row2">백분위</th>
+      <td headers="col3 col31 row2">93</td>
+      <td headers="col4 col41 row2">95</td>
+      <td headers="col6 col61 row2">75</td>
+      <td headers="col6 col62 row2">93</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th id="row3">등급</th>
       <td>2</td>
       <td>2</td>
       <td>2</td>
