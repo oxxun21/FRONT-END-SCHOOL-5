@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EAE8FE;
+}
+
+/* header */
+.title {
+  width: 386px;
+  margin: auto;
+}
+
+.title img {
+  width: 100%;
+}
+
+/* main container */
+.container {
+  margin: 60px auto;
+  width: 740px;
+  height: 545px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container > section {
+  width: 360px;
+  background-color: #fff;
+}
+
+/* section1 */
+.banding-machine {
+  height: 545px;
+  padding: 31px 27px;
+}
+
+.machine {
+  display: grid;
+  grid-template-columns: repeat(3, 94px);
+	grid-template-rows: repeat(2, 130px);
+  gap: 12px;
+}
+
+.cola-type {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 9px 0;
+}
+
+.active {
+  box-shadow: 0 0 0 3px #6327FE;
+}
+
+.cola-type > img,
+.cola-type > p,
+.cola-type > div {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.cola-type > p {
+  font-size: 9px;
+  margin: 7px 0;
+}
+
+.cola-type > div {
+  font-size: 12px;
+  height: 22px;
+  width: 70px;
+  background-color: #6327FE;
+  border-radius: 50px;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* section2 */
+.price {
+  height: 50px;
+}
+
+.price > div {
+  width: 306px;
+  height: 32px;
+  background-color: #EAE8FE;
+  border-radius: 5px;
+  margin: 9px auto;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.price > div > span:first-child {
+  float: left;
+}
+
+.price > div > span:last-child {
+  float: right;
+}
+
+/* section3 */
+.drink-obtained {
+  height: 475px;
+}
+
+.drink-obtained > h2 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 21px;
+}
+
+.drink-obtained .drink-content {
+  width: 306px;
+  height: 364px;
+  background-color: #EAE8FE;
+  border-radius: 5px;
+  margin: 13px auto;
+  padding: 12px 0;
+  border: 1px solid #BDBDBD;
+}
+
+.drink-inner-content {
+  height: 46px;
+  width: 276px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: auto;
+  padding: 6px 10px;
+}
+
+.drink-inner-content:not(:first-child) {
+  margin-top: 6px;
+}
+
+
+.drink-inner-content > img {
+  height: 33px;
+  width: 18px;
+  vertical-align: middle;
+}
+
+.drink-inner-content > p {
+  display: inline-block;
+  font-size: 9px;
+  margin-left: 5px;
+} 
+
+.drink-inner-content .drink-count {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: 2px solid #BDBDBD;
+  text-align: center;
+  line-height: 1.6;
+  float: right;
+  margin: 2px 0;
+}
+
+
+.drink-obtained > p {
+  text-align: right;
+  font-size: 12px;
+  margin-right: 25px;
+}
