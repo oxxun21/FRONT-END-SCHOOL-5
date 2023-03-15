@@ -1,8 +1,3 @@
-/* :root {
-  --join-background: url(../img/icon-join.svg);
-  --user-background: url(../img/icon-user.svg);
-} */
-
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +9,6 @@ body {
 }
 
 /* header */
-
 header {
   background-color: #fff;
 }
@@ -29,66 +23,75 @@ header {
   height: 75px;
 }
 
-.btn-join {
-  display: block;
+/* a button */
+[class ^= "btn-"]{
+  display: inline-block;
   padding: 1em 1em 1em 2.8em;
-  float: right;
   text-decoration: none;
   color: #5a6a72;
-  background: url(../img/icon-join.svg)  no-repeat 0.8em center / 2em;
-  margin: 10px;
 }
 
-.btn-user {
-  background: url(../img/icon-user.svg)  no-repeat 1.2em center / 1em;
+.btn-join {
+  background: url(../img/icon-join.svg)  no-repeat 0.8em center / 2em;
+}
+
+.btn-login {
+  background: url(../img/icon-login.svg)  no-repeat 0.8em center / 2em;
+}
+
+.btn-logout {
+  background: url(../img/icon-logout.svg)  no-repeat 0.8em center / 2em;
+}
+
+/* button */
+.black-btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: #29363d;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.black-btn:not(:disabled) {
+  cursor: pointer;
+}
+
+.black-btn:disabled {
+  background-color: #9fa9ae;
 }
 
 /* form */
-
-label,
-input,
-button {
+.label-style,
+.input-style {
   display: block;
   width: 100%;
   box-sizing: border-box;
 }
 
-label {
+.label-style {
   font-size: 14px;
   color: #29363d;
   margin-bottom: 8px;
 }
 
-input {
+.input-style {
   background-color: #fff;
   box-shadow: 0 1px 0 0 #29363d;
   height: 48px;
   padding: 0 16px;
-  margin-bottom: 24px;
   transition: box-shadow 0.2s;
   border-radius: 4px 4px 0 0;
 }
 
-input:hover {
+.input-style:hover {
   box-shadow: 0 2px 0 0 #2e6ff2;
 }
 
-input:focus {
+.input-style:focus {
   outline: none;
   box-shadow: 0 0 0 2px #2e6ff2;
   border-radius: 4px;
-}
-
-button {
-  height: 48px;
-  background-color: #29363d;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #9fa9ae;
 }
