@@ -10,21 +10,26 @@ body {
 
 /* header */
 header {
-  background-color: #fff;
+  background-color: white;
 }
-
 .header-wrap {
   width: 1224px;
+  height: 120px;
+  max-width: calc(100% - 60px);
   margin: auto;
-  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn-logo {
+.logo {
   height: 75px;
 }
 
 /* a button */
-[class ^= "btn-"]{
+.btn-join,
+.btn-login,
+.btn-logout {
   display: inline-block;
   padding: 1em 1em 1em 2.8em;
   text-decoration: none;
