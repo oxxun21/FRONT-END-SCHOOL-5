@@ -8,22 +8,15 @@ body {
   background-color: #FFFAF0;
 }
 
-/* header */
-header {
-  background-color: white;
-}
-.header-wrap {
-  width: 1224px;
-  height: 120px;
-  max-width: calc(100% - 60px);
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 75px;
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
 /* a button */
@@ -89,6 +82,7 @@ header {
   padding: 0 16px;
   transition: box-shadow 0.2s;
   border-radius: 4px 4px 0 0;
+  font-size: 16px;
 }
 
 .input-style:hover {
@@ -99,4 +93,47 @@ header {
   outline: none;
   box-shadow: 0 0 0 2px #2e6ff2;
   border-radius: 4px;
+}
+
+/* header */
+header {
+  background-color: white;
+}
+
+.header-wrap {
+  width: 1224px;
+  max-width: calc(100% - 60px);
+  height: 120px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 75px;
+}
+
+.hello {
+  display: inline-block;
+}
+
+.hello strong {
+  box-shadow: inset 0 -0.6em rgba(255, 79, 110, 0.5);
+}
+
+@media (min-width: 541px) {
+  .hello::after {
+    content: "|";
+    color: #d8ddde;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hello {
+    position: absolute;
+    top: 140px;
+    right: 34px;
+  }
 }
