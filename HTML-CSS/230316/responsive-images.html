@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive images</title>
+
+    <style>
+      /* @media screen and (min-width: 620px) {
+        img {
+          width: 200px;
+        }
+      } */
+      /* img 태그 size보다 css size 속성이 더 우선된다. */
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+  <!-- <img
+    width="200px"
+    srcset="./images/rabbit_300.png 2x,
+            ./images/rabbit_500.png 3x"
+    src="./images/rabbit_150.png"
+    alt="test"> -->
+  <!-- x, y 서술자 동시 사용 X -->
+  <!-- <img
+    width="200px"
+    srcset="./images/rabbit_500.png 500w,
+            ./images/rabbit_300.png 300w,
+            ./images/rabbit_150.png 150w"
+    src="./images/rabbit_150.png"
+    alt="test"> -->
+
+    <!-- <img
+      srcset="./images/rabbit_500.png 500w,
+              ./images/peng.png 300w,
+              ./images/rabbit_150.png 150w"
+      sizes="(min-width: 960px) 250px,
+            (min-width: 620px) 150px,
+            300px"
+      src="./images/rabbit_150.png"
+      alt="test"> -->
+
+      <picture>
+        <source srcset="./images/rabbit_500.png" media="(min-width:960px)"> 
+        <source srcset="./images/rabbit_300.png" media="(min-width:620px)"> <!-- media="(min-width: px)" : 조건 -->
+        <img src="./images/rabbit_150.png" alt="귀여운 아기 팽귄들">
+    </picture>
+  <!-- JavaScript -->
+  <script src=""></script>
+</body>
+</html>
