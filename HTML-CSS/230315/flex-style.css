@@ -1,0 +1,162 @@
+/* layout */
+.container {
+  display: flex;
+}
+
+.container .section-text { 
+  flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  .container .container2 {
+    flex-basis: 486px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .container2 {
+    flex-direction: row;
+  }
+
+  .container2 .link1,
+  .container2 .link2 {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container2 {
+    gap: 14px;
+  }
+}
+
+/* style */
+.container {
+  width: 1200px;
+  max-width: calc(100% - 60px);
+  min-width: 400px;
+}
+
+.section-text h1 {
+  color: #121314;
+  font-size: 70px;
+  font-weight: normal;
+}
+
+.section-text p {
+  color: #47494d;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.link1, .link2 {
+  border-radius: 20px;
+  color: #fff;
+  padding: 40px 30px 30px 40px;
+  aspect-ratio: 486 / 280;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link1 {
+  background: url(./img/Rectangle\ 2.png) no-repeat 0 0 / cover; 
+}
+
+.link2 {
+  background: url(./img/Rectangle\ 3.png) no-repeat 0 0 / cover; 
+}
+
+.link1 strong, 
+.link2 strong {
+  font-size: 30px;
+}
+
+.link1 span, 
+.link2 span {
+  align-self: flex-end;
+}
+
+/* 가상 요소 이용 */
+.go-after::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border: 1px solid #fff;
+  border-width: 1px 1px 0 0;
+  margin-left: 0.2em;
+  transform: rotate(45deg);
+}
+
+/* 백그라운드 이미지 이용 */
+.go-bg {
+  padding-right: 1.3em;
+  background: url(./img/arrow.svg) no-repeat 100% center / contain;
+}
+
+@media (max-width: 1200px) {
+  .section-text p {
+    font-size: 18px;
+  }
+  
+  .link1, 
+  .link2 {
+    padding: 40px 20px 20px 30px;
+  }
+
+  .lin1 strong, 
+  .link2 strong {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: auto;
+  }
+
+  .section-text h1 {
+    font-size: 36px;
+  }
+
+  .link1 p {
+    margin-top: 18px;
+  }
+
+  .link1 strong, 
+  .link2 strong {
+    font-size: 20px;
+  }
+}
+
+@media (min-height: 820px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-height: 819px) {
+  .container {
+    margin: 40px auto;
+  }
+}
