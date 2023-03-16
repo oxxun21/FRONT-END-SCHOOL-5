@@ -1,0 +1,117 @@
+:root {
+  --main-background-color: #EAE8FE;
+  --sub-background-color: #6327FE;
+  --main-border: 1px solid #BDBDBD;
+  --main-border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+/* header */
+.title {
+  width: 386px;
+  margin: auto;
+}
+
+.title img {
+  width: 100%;
+}
+
+/* main container */
+.container {
+  margin: 60px auto;
+  width: 740px;
+  height: 545px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container > section {
+  width: 360px;
+  background-color: #fff;
+}
+
+/* 소지금, 잔액 영역 */
+.balance {
+  background-color: var(--main-background-color);
+  border-radius: var(--main-border-radius);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 15px;
+}
+
+.balance > span:first-child {
+  float: left;
+}
+
+.balance > span:last-child {
+  float: right;
+}
+
+/* 음료 장바구니 목록 */
+.shopping-basket {
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+  background-color: var(--main-background-color);
+  padding: 12px 18px 0 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shopping-basket::before {
+  content: "";
+  width: 4px;
+  height: 79px;
+  background-color: #fff;
+  position: absolute;
+  top: 9px;
+  right: 4px;
+  border-radius: 50px;
+}
+
+.shopping-basket-inner {
+  width: 170px;
+  height: 46px;
+  background-color: #fff;
+  border-radius: var(--main-border-radius);
+  padding: 6px 10px;
+  margin-bottom: 6px;
+}
+
+.shopping-basket-inner > img {
+  height: 33px;
+  width: 18px;
+  vertical-align: middle;
+}
+
+.shopping-basket-inner > p {
+  display: inline-block;
+  font-size: 9px;
+  margin-left: 5px;
+} 
+
+.shopping-basket-inner > div {
+  height: 30px;
+  width: 30px;
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  text-align: center;
+  line-height: 1.9;
+  float: right;
+  margin: 2px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
