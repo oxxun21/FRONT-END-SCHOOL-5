@@ -1,0 +1,232 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  font: inherit;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.wrap {
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 40px 30px 30px;
+  width: 1060px;
+  margin: 86px auto 135px;
+}
+
+/* header */
+header h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+header > span {
+  width: 650px;
+  height: 1px;
+  display: block;
+  background: #BDBDBD;
+  margin: 0 auto;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 28px;
+}
+
+header li button {
+  padding: 10px;
+  font-size: 16px;
+  color: #828282;
+}
+
+header li:first-child button {
+  font-weight: 900;
+  color: #000;
+}
+
+/* main */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 24px 23px;
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  background: #fff;
+  padding: 30px;
+  margin-top: 28px;
+}
+
+.moive-card {
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.moive-content {
+  padding: 20px;
+}
+
+.moive-content img {
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  aspect-ratio: 180 / 250;
+  width: 100%;
+  object-fit: cover;
+}
+
+.moive-content h3 {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.content-info {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.content-info li :first-child {
+  color: #828282;
+  margin-right: 5px;
+}
+
+.star {
+  background: url(./img/Star\ 1.png) no-repeat 0 / 1em;
+  padding-left: 1.3em;
+}
+
+.moive-btn {
+  border-top: 1px solid #BDBDBD;
+  display: flex;
+}
+
+.moive-btn a,
+.moive-btn button {
+  background: #F2F2F2;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+.moive-btn a {
+  border-right: 1px solid #BDBDBD;
+  border-radius: 0 0 0 10px;
+}
+
+.moive-btn a:focus {
+  z-index: 10;
+}
+
+.moive-btn button {
+  border-radius: 0 0 10px 0;
+}
+
+.moive-btn button::before {
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background: url(./img/아이콘_재생.png) no-repeat 0 3px / 1em;
+}
+
+/* footer */
+footer {
+  background-color: #F2F2F2;
+}
+
+.fcontent {
+  padding: 53px 0 38px 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fcontent span {
+  width: 1190px;
+  height: 1px;
+  background: #C4C4C4;
+  display: block;
+  margin: 42px auto 36px;
+}
+
+.fup, .fdown {
+  width: 1190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.fcontent li {
+  display: inline;
+} 
+
+.sns li {
+  margin-left: 25px;
+}
+
+.fup h2 {
+  font-size: 23px;
+}
+
+.fdown li {
+  position: relative;
+  margin-right: 10px;
+}
+
+.fdown li:not(:first-child)::after {
+  content: "";
+  width: 1px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: -8px;
+  top: 2px;
+  background: #4F4F4F ;
+} 
+
