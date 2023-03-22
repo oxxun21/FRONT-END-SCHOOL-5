@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  color: inherit;
+}
+
+button {
+  background: none;
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.wrap {
+  width: 520px;
+  margin: 40px auto;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+/* header */
+.header {
+  width: 100%;
+  padding: 20px 24px 18px;
+  border-bottom: 1px solid #C4C4C4;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.header button {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 24px;
+  top: 23px;
+}
+
+.header button img {
+  width: 100%;
+}
+
+/* main */
+.main {
+  padding: 26px 24px 25px;
+}
+
+.main h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main .login {
+  margin-top: 24px;
+}
+
+/* login */
+.login-id, 
+.login-password {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  padding: 15px 16px;
+  font-size: 16px;
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+.login-password {
+  margin: 10px 0 16px;
+}
+
+.login-checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: url(./images/check-box.png) no-repeat center / contain;
+  vertical-align: top;
+  transition: ease .3s;
+  cursor: pointer;
+}
+
+.login-checkbox:checked {
+  background: url(./images/Ellipse1.png) no-repeat center / contain;
+}
+
+.checkbox-label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: #2F80ED;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-other {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 14px;
+}
+
+.login-other a {
+  font-size: 14px;
+  color: #767676;
+}
+
+.login-other span {
+  width: 1px;
+  height: 18px;
+  background: #767676;
+  display: inline-block;
+  margin-top: 1px;
+}
+
+/* middle-line */
+.line {
+  width: 100%;
+  margin: 30px auto 20px auto;
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  width: 210px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #C4C4C4;
+}
+
+.line::after {
+  content: "";
+  width: 210px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: #C4C4C4;
+}
+
+/* social-login */
+.social-login button {
+  width: 100%;
+  height: 50px;
+  color: #767676;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 15px 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.social-login button:not(:first-child) {
+  margin-top: 10px;
+}
+
+.google {
+  border: 1px solid #767676;
+  background: url(./images/Group.png) no-repeat 15px center / 2em;
+}
+
+.facebook {
+  border: 1px solid #2D9CDB;
+  background: url(./images/facebook.png) no-repeat 15px center / 2em;
+}
+
+.naver {
+  border: 1px solid #00BF18;
+  background: url(./images/Vector.png) no-repeat 15px center / 2em;
+}
+
+.kakao {
+  border: 1px solid #F2C94C;
+  background: url(./images/message-circle.png) no-repeat 15px center / 2em;
+}
