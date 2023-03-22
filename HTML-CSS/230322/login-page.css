@@ -26,6 +26,10 @@ img {
   vertical-align: top;
 }
 
+ul {
+  list-style: none;
+}
+
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -50,25 +54,12 @@ img {
   width: 100%;
   padding: 20px 24px 18px;
   border-bottom: 1px solid #C4C4C4;
-  position: relative;
 }
 
 .header h1 {
   font-size: 16px;
   text-align: center;
   font-weight: 500;
-}
-
-.header button {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  right: 24px;
-  top: 23px;
-}
-
-.header button img {
-  width: 100%;
 }
 
 /* main */
@@ -124,7 +115,6 @@ img {
 .login-btn {
   width: 100%;
   height: 50px;
-  display: block;
   background: #2F80ED;
   border-radius: 5px;
   margin-top: 20px;
@@ -158,6 +148,7 @@ img {
 
 /* middle-line */
 .line {
+  display: block;
   width: 100%;
   margin: 30px auto 20px auto;
   text-align: center;
@@ -201,7 +192,7 @@ img {
   line-height: 1;
 }
 
-.social-login button:not(:first-child) {
+.social-login li:not(:first-child) {
   margin-top: 10px;
 }
 
@@ -223,4 +214,23 @@ img {
 .kakao {
   border: 1px solid #F2C94C;
   background: url(./images/message-circle.png) no-repeat 15px center / 2em;
+}
+
+/* close */
+.close {
+  position: relative;
+}
+
+.close button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 24px;
+  top: -715px;
+  cursor: pointer;
+}
+
+.close button img {
+  width: 16px;
+  height: 16px;
 }
