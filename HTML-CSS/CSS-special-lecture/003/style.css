@@ -1,0 +1,151 @@
+body, p {
+  margin: initial;
+}
+
+h1, h2, h3{
+  font-size: inherit;
+  font-weight: inherit;
+  margin: initial;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul, li {
+  padding: initial;
+  list-style: none;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.wrap {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-purple {
+  background-color: #673399;
+  color: #fff;
+}
+
+.section-pink {
+  background-color: seashell;
+  color: salmon;
+}
+
+.section-header {
+  margin-bottom: 100px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title-headings {
+  flex-basis: 26%;
+  flex-shrink: 0;
+  font-size: 40px;
+}
+
+.title-headings strong {
+  box-shadow: inset 0 -20px 0 orangered;
+}
+
+.title p {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.title p::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  flex-shrink: 0;
+  background-color: currentColor;
+  margin-right: 20px;
+}
+
+.card {
+  background-color: #fff;
+  color: #222;
+  margin-bottom: 24px;
+  display: flex;
+  min-height: 200px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.card-cover {
+  flex-basis: 26%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-cover h2 {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+.card-content {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  padding: 30px;
+}
+
+.lists {
+
+}
+
+.lists li {
+  text-indent: -20px;
+  padding-left: 20px;
+}
+
+.lists li + li {
+  margin-top: 10px;
+}
+
+.lists li::before {
+  content: "";
+  background-color: #673399;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+}
