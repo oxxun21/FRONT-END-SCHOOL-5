@@ -205,6 +205,7 @@ button {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .card-pink {
@@ -218,8 +219,15 @@ button {
   flex-grow: 1;
 }
 
-.card-cover-pink img {
+.card-cover-pink > img {
   width: 100%;
+  overflow: hidden;
+}
+
+.card-content-pink > img {
+  position: absolute;
+  top: -9px;
+  left: -9px;
 }
 
 .card-main {
@@ -289,4 +297,57 @@ button {
   border-radius: 50%;
   border: 3px solid #fff;
   margin-right: -7px;
+}
+
+/* media */
+@media (max-width: 960px) {
+  .wrap {
+    width: 70%;
+  }
+  .section-header {
+    margin-bottom: 50px;
+  }
+  .title-purple {
+    flex-direction: column;
+  }
+  .title-purple .title-headings {
+    text-align: center;
+  }
+  .title-purple .title-headings strong {
+    display: block;
+  }
+  .title-purple p {
+    max-width: 100%;
+    justify-content: flex-start;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .title-purple p::before {
+    display: none;
+  }
+  .card-purple,
+  .card-purple:nth-child(even) {
+    flex-direction: column;
+  }
+  .title-pink .title-headings {
+    flex-basis: 65%;
+  }
+  .section-content-pink {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .wrap {
+    width: 80%;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }  
+  .title-purple .title-headings {
+    font-size: 35px;
+  }
+  .title-pink .title-headings {
+    font-size: 30px;
+  }
 }
