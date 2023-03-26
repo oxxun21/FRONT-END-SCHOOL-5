@@ -224,6 +224,7 @@ button {
 .card-pink:hover {
   transform: rotateY(180deg);
 }
+/* hover를 하게 되면 more people를 누르는데 방해되는 것에 대해 고민해봐야함 */
 
 .card-pink > div {
   backface-visibility: hidden;
