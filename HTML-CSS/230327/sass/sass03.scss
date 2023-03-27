@@ -1,0 +1,201 @@
+// mixin
+// @mixin 이름(매개변수) : 생성
+// @include 이름(인수) : 사용
+
+// before
+// .card{
+// 	display : flex;
+// 	justify-content : center;
+// 	align-items : center;
+// 	background : gray;
+// }
+
+// .aside {
+// 	display : flex;
+// 	justify-content : center;
+// 	align-items : center;
+// 	background : white;
+// }
+// .card와 .aside 클래스 선택자의 적용한 스타일이 겹침
+
+//after
+// @mixin center-xy{
+//     display: flex;
+//     justify-content : center;
+//     align-items : center;
+// }
+
+// .card{
+//     @include center-xy; // 정의한 center-xy mixin을 사용하여 코드 한줄이면 끝!
+//     background: gray;
+// }
+
+// .aside{
+//     @include center-xy;
+//     background: white;
+// }
+
+@mixin box {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  @include box;
+  background: blue;
+}
+
+.profile {
+  @include box;
+  background: red;
+}
+
+.card {
+  @mixin box {
+    width: 100px;
+    height: 100px;
+  }
+  @include box;
+  background: blue;
+} // @mixin 내부에서 사용이 가능하긴 하나 내부 사용 권장 X
+
+// 인수 넣기 가능 ⭐⭐⭐ 가장 많이 쓰는 형태
+@mixin box($value) {
+  width: 100px;
+  height: 100px;
+
+  @if ($value == 'circle') {
+    border: 1px soild balck;
+    border-radius: 50%;
+  }
+  @if ($value == 'rect') {
+    border: 1px soild balck;
+    border-radius: 10%;
+  }
+}
+
+.card {
+  @include box('circle');
+  background-color: blue;
+}
+
+.profile {
+  @include box('rect');
+  background-color: red;
+}
+
+// 기본값은 맨 오른쪽에 삽입
+@mixin pri-button($width, $height, $radius:10px) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: aqua;
+}
+
+@mixin pri-button_($width:100px, $height:50px, $radius:10px) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: aqua;
+}
+
+.btn {
+  @include pri-button(100px, 50px, 20px)
+}
+
+.btn_ {
+  @include pri-button(100px, 50px)  
+}
+
+.btn__ {
+  @include pri-button(100px, null, 20px)  // null은 값이 아예 빠짐 => height X
+}
+
+.btn__ {
+  @include pri-button_(100px, null, 20px)
+}
+
+// 중앙값 비우기
+.btn__ {
+  @include pri-button_(100px, $radius:20px)
+}
+
+// mixin 실습
+// .card {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .card-item {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 10%;
+// }
+
+// .product {
+//   display: flex;
+//   justify-content: right;
+//   align-items: right;
+// }
+
+// .product-item {
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 20%;
+// }
+
+@mixin flex($direction) {
+  display: flex;
+  justify-content: $direction;
+  align-items: $direction;
+}
+
+@mixin item($length, $radius) {
+  width: $length;
+  height: $length;
+  border-radius: $radius;
+}
+
+.card {
+  @include flex(center)
+}
+
+.card-item {
+  @include item(100px, 10%)  
+}
+
+.product {
+  @include flex(right)
+}
+
+.product-item {
+  @include item(200px, 20%)  
+}
+
+// extend
+.base-box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 10%;
+}
+
+.box {
+  @extend .base-box;
+  border: 10px solid black;
+}
+
+// %placeholder
+%base-box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 10%;
+}
+
+.box {
+  @extend %base-box;
+  border: 10px solid black;
+}
+// extend 자체를 사용 잘 안한다.

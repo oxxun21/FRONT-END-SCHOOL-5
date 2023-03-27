@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* 두 줄 주석입니다. */
+/* 두 줄 주석만 컴파일 파일에 남는다. */
+.one {
+  color: blue;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: red;
+}
+
+ul li {
+  color: salmon;
+  font-size: 10px;
+}
+
+.add-icon {
+  background-image: url("./assets/arrow-right-solid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: lightcoral;
+  transition: all 0.5s;
+}
+.box:hover {
+  background-color: green;
+}
+
+ul li:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+ul li:last-child {
+  border: 2px solid black;
+}
+
+ol {
+  border: 1px solid black;
+}
+ol li:nth-child(1) {
+  color: red;
+}
+ol li:nth-child(2) {
+  color: gold;
+}
+ol li:nth-child(3) {
+  color: orange;
+}
+
+.box-yellow {
+  background-color: yellow;
+}
+.box-green {
+  background-color: green;
+}
+.box-blue {
+  background-color: blue;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.article .article-content {
+  font-size: 14px;
+  opacity: 0.7;
+}
+i {
+  opacity: 0.5;
+}
+
+.one {
+  color: yellow;
+}
+.one .two {
+  color: blue;
+}
+.one .two .three {
+  color: green;
+}
+.four {
+  color: red;
+}/*# sourceMappingURL=sass01.css.map */

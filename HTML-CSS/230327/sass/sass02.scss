@@ -1,0 +1,207 @@
+// 변수
+// $변수 : 값 
+//색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #3e5e9e;
+$link-color : red;
+$p-color : #282A36;
+
+//폰트사이즈
+$font-p : 13px;
+$font-h1 : 28px;
+
+//폰트
+$base-font : 'Noto Sans KR', sans-serif;
+
+body{
+  background-color : $bg-color;
+  font-size : $font-p;
+  font-family : $base-font;
+}
+
+h1{
+  font-size : $font-h1;
+  color : $black;
+}
+
+p{
+  font-size : $font-p;
+  color : $black;
+}
+
+// lists
+$sizes: 40px, 50px, 80px;
+$valid-sides: top, bottom, left, right;
+
+//maps
+$font-sizes: ("h1": 45px, "h2": 19px, "p": 16px);
+
+.title {
+    font-size : nth($sizes, 1); // nth : 특정 값 꺼내기 (sizes 변수에서 1번째것) (-1은 마지막)
+}
+
+.title2 {
+    font-size: map-get($font-sizes, "h2"); // map : 키 값으로 값 가져오기 가능 (font-sizes 변수에서 키가 h2인 것)
+}
+
+$path : './assets/img/'; // 이미지의 기본적인 base root을 설정하고 사용
+$name : 'background.png';
+.test {
+    background-image: url($path + $name);
+} 
+
+.one {  // 안에서 변수 선언 가능 (지역변수) => sass 에서는 전역 변수를 지향
+  $value: red;
+  color: $value; 
+  .three {
+    background-color: $value;  // .two 에서 오류가 나면 three도 사용불가
+  }
+}
+
+// .two {
+//   color: $value; 지역변수는 바깥 블록에서 사용 불가
+// }
+
+// 변수 스코프
+// !global : 지역 변수를 전역 변수로 바꾸어줌 => 사용 X
+
+// 비교연산자 사용
+@mixin fontSize($size, $row:null, $w:inherit) {
+  // $size: $size * 0.9;
+  font-size: $size + px;
+  font-weight:$w;
+
+  // Operator
+  @if ($size >=38) {
+      letter-spacing: -2.4px;
+  }
+
+  @else if ($size >=28) {
+      letter-spacing: -1px;
+  }
+
+  @else if ($size >=18) {
+      letter-spacing: -0.5px;
+  }
+
+  // line-height 설정
+  @if ($row !=null) {
+      line-height: $row;
+  }
+
+  @include media(600) {
+      $size: $size * 0.15;
+      font-size: $size + vw;
+  }
+
+  @include media(480) {
+      $size: $size * 1.3;
+      font-size: $size + vw;
+  }
+
+  @include media(375) {
+      $size: $size * 1.05;
+      font-size: $size + vw;
+  }
+
+  /*
+  @else {
+      $lineHeight: $size + 10 + px;
+      line-height: $lineHeight;
+  }
+  */
+}
+
+@mixin flex($align:null, $way:row) { 
+  display:flex;
+  flex-direction:$way;
+  @content;
+  @if( #{$align} == 'center') {
+      justify-content:center;
+      align-items:center;
+  } @else if ( #{$align} == 'leftCenter') {
+      align-items:center;
+  } @else if (#{$align} == 'spaceCenter') {
+      justify-content:space-between;
+      align-items:center;
+  } @else if (#{$align} == 'space') {
+      justify-content:space-between;
+  }
+}
+
+// rails sass는 @debug 가 디폴트
+@debug 100 > 50; // true
+@debug 10px < 17px; // true
+@debug 96px >= 1in; // true
+@debug 1000ms <= 1s; // true
+
+$value: 32px;
+p {
+    @if ($value >=32px) {
+        letter-spacing: 1rem;
+    }
+
+    @else {
+        letter-spacing: 0.5rem;
+    }
+}
+
+.one {
+  font-size: 10px + 10px;
+}
+
+.two {
+  font-size: 30px - 10px;
+}
+
+.three {
+  font-size: 10px * 2;
+}
+
+.four {
+  font-size: (20px / 10); // 나누기는 괄호 있음~
+  // font-size: (20px / 10px); => error 
+}
+
+.five {
+  font-size: 8px % 3;
+}
+
+@debug not true;
+@debug not false;
+// true : 1
+// false : 0
+// or : 더하기
+// and : 곱
+@debug true and false; // 둘 중 하나라도 false라면 false
+
+// 두 조건이 모두 충족되는 경우
+$value: 32px;
+$color: black;
+
+p {
+    @if ($value >=32px and $color ==red) {
+        letter-spacing: 1rem;
+    }
+
+    @else {
+        letter-spacing: 0.5rem;
+    }
+}
+
+@debug true or true; // 둘 중 하나라도 true라면 true
+
+// 어떤 조건이든 하나라도 true 만족한다면!
+$value2: 32px;
+$color2: red;
+
+.test {
+    @if ($value2 >=32px or $color2 ==black) {
+        letter-spacing: 1rem;
+    }
+
+    @else {
+        letter-spacing: 0.5rem;
+    }
+}
