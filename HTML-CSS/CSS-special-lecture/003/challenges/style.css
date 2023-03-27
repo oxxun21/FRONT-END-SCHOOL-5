@@ -215,7 +215,7 @@ button {
   
   flex-basis: calc(100% / 3 - 16px);
   flex-shrink: 1;
-  flex-grow: 1;
+  flex-grow: 0;
 
   transition: all 1s;
   transform-style: preserve-3d;
