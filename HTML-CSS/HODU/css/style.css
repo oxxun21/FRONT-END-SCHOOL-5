@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+.D-btn {
+  width: 140px; 
+  padding: 15px 30px;
+  background: #D97652;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 320px;
+  background-color: #F2E9D8;
+}
+
+.logo {
+  width: 130px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-ul a {
+  padding: 10px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+main {
+  padding: 0 320px;
+  height: 765px;
+  background: url(../img/hodu-main.png) no-repeat calc(100% - 320px) / 415px;
+  background-color: #F2E9D8;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 48px; 
+  padding-top: 200px;
+}
+
+main p {
+  width: 440px;
+  font-size: 16px;
+  margin: 40px 0;
+  line-height: 20px;
+}
+
+.hodu-section1 {
+  padding: 80px 320px 120px;
+}
+
+.hodu-section1 figure {
+  max-width: 660px;
+  margin-right: 110px;
+  display: inline-block;
+}
+
+.hodu-section1 figure img {
+  width: 100%;
+}
+
+.hodu-section1 h3 {
+  font-size: 35px;
+  font-weight: 700;
+  display: inline-block;
+}
