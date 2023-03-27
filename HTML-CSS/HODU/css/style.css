@@ -9,6 +9,11 @@ body {
   font-family: 'SpoqaHanSansNeo-Regular';
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .D-btn {
   width: 140px; 
   padding: 15px 30px;
@@ -21,13 +26,19 @@ body {
   cursor: pointer;
 }
 
+.wrap {
+  width: calc(100% - 340px);
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 31px 320px;
+  padding: 31px 0;
   background-color: #F2E9D8;
 }
+
 
 .logo {
   width: 130px;
@@ -51,14 +62,11 @@ header {
 
 .nav-ul a {
   padding: 10px 0;
-  color: #000;
-  text-decoration: none;
 }
 
 main {
-  padding: 0 320px;
   height: 765px;
-  background: url(../img/hodu-main.png) no-repeat calc(100% - 320px) / 415px;
+  background: url(../img/hodu-main.png) no-repeat right / contain;
   background-color: #F2E9D8;
 }
 
@@ -76,21 +84,97 @@ main p {
 }
 
 .hodu-section1 {
-  padding: 80px 320px 120px;
+  padding: 80px 0 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hodu-section1 figure {
-  max-width: 660px;
+  min-width: 660px;
   margin-right: 110px;
-  display: inline-block;
+  flex-shrink: 1;
+  /* min-width: 0; 미디어 쿼리에서 적용 */
 }
 
 .hodu-section1 figure img {
   width: 100%;
 }
 
-.hodu-section1 h3 {
+.hodu-section1-content h3 {
   font-size: 35px;
   font-weight: 700;
-  display: inline-block;
+  line-height: 45px;
+  margin-bottom: 30px;
+}
+
+.hodu-section1-content p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hodu-section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hodu-section2 h3 {
+  font-size: 48px;
+  color: #D97652;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.hodu-section2 > p {
+  width: 740px;
+  text-align: center;
+  margin-bottom: 88px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hodu-section2-ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.hodu-section2-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 196px;
+}
+
+.hodu-section2-footer p {
+  width: 740px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hodu-section2-footer a.D-btn {
+  width: 140px;
+  padding: 20px 5px;
+  text-align: center;
+}
+
+.hodu-bg {
+  margin: 0 -170px;
+  height: 340px;
+  background: url(../img/hodu-bg.png) no-repeat center 0 / cover;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.sns {
+  display: flex;
+  gap: 20px;
 }
