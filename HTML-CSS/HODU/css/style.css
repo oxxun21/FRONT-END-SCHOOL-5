@@ -14,6 +14,17 @@ a {
   text-decoration: none;
 }
 
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 .D-btn {
   width: 140px; 
   padding: 15px 30px;
@@ -27,7 +38,7 @@ a {
 }
 
 .wrap {
-  width: calc(100% - 340px);
+  width: 1280px;
   margin: 0 auto;
 }
 
@@ -36,9 +47,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 31px 0;
-  background-color: #F2E9D8;
+  position: absolute;
+  left: 115px;
+  width: 1280px;
+  z-index: 9999;
 }
-
 
 .logo {
   width: 130px;
@@ -63,17 +76,24 @@ header {
 .nav-ul a {
   padding: 10px 0;
 }
+  
 
 main {
-  height: 765px;
-  background: url(../img/hodu-main.png) no-repeat right / contain;
   background-color: #F2E9D8;
+}
+
+main .wrap {
+  padding-top: 100px;
+  background: url(../img/hodu-main.png) no-repeat 900px bottom / 25%;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 main h2 {
   font-weight: 700;
   font-size: 48px; 
-  padding-top: 200px;
+  padding-top: 150px;
+  line-height: 60px;
 }
 
 main p {
@@ -138,7 +158,7 @@ main p {
 .hodu-section2-ul {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .hodu-section2-footer {
@@ -162,9 +182,44 @@ main p {
 }
 
 .hodu-bg {
-  margin: 0 -170px;
+  margin: 0 -118px;
   height: 340px;
   background: url(../img/hodu-bg.png) no-repeat center 0 / cover;
+}
+
+.subscribe {
+  margin-top: -100px;
+  position: absolute;
+  width: 1280px;
+  background-color: #263140;
+  color: #fff;
+  border-radius: 30px;
+  padding: 50px 58px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.subscribe p {
+  font-size: 14px;
+  width: 490px;
+  line-height: 18px;
+}
+
+.subscribe form input {
+  width: 530px;
+  background: #FFFFFF url(../img/mail.svg) no-repeat 30px center / 24px;
+  border-radius: 60px;
+  margin-right: -150px;
+  padding: 22px 68px 20px;
+  box-sizing: border-box;
 }
 
 footer {
@@ -172,6 +227,14 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
+}
+
+footer h1 {
+  width: 226px;
+}
+
+footer h1 img {
+  width: 100%;
 }
 
 .sns {
