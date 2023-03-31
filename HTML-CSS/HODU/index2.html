@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HODU</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1 class="logo">
+        <a href="#"><img src="./img/Logo.svg" alt="HODU"></a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav-ul">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <button type="button" class="btn">Download</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <div class="main-left">
+        <h2>Lorem Ipsum is simply<br/> dummy text of the printing and</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. <br />
+          Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown
+        </p>
+        <button type="button" class="btn">Download</button>
+      </div>
+      <div class="main-right">
+        <img src="./img/hodu-main.png" alt="박스 뒤집어 쓴 호두">
+      </div>
+    </div>
+  </main>
+  <section>
+    <div class="wrap">
+      <section class="section1">
+        <figure class="section1-img">
+          <img src="./img/hodu1.png" alt="누워있는 호두">
+        </figure>
+        <div class="section1-content">
+          <h3>Lorem Ipsum is simply dummy text of the printing and dummy text</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+      </section>
+      <section class="section2">
+        <div class="section2-title">
+          <h3>dummy text of the printing and dummy</h3>
+          <p>
+            Lorem Ipsum is simply <strong>dummy text</strong> of the printing and typesetting industry.<br/>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          </p>
+        </div>
+        <div class="section2-img">
+          <ul>
+            <li><img src="./img/hodu2.png" alt="호두 귀여워"></li>
+            <li><img src="./img/hodu3.png" alt="호두 귀여워"></li>
+            <li><img src="./img/hodu4.png" alt="호두 귀여워"></li>
+          </ul>
+        </div>
+        <div class="section2-content">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </section>
+      <article class="subscribe">
+        <div class="subscribe-content">
+          <h3>Subscribe to our Blog post</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          </p>
+        </div>
+        <form class="subscribe-form">
+          <label for="email-call" class="a11y-hidden">subscribe</label>
+          <input id="email-call" type="email" placeholder="Enter your e-mail address">
+          <button type="submit" class="btn" id="subscribe-btn">Subscribe</button>
+        </form>
+      </article>
+    </div>
+  </section>
+  <div class="hodu-bg">
+    <button type="button" class="up-btn"></button>
+  </div>
+  <footer>
+    <div class="wrap">
+      <h1><img src="./img/Logo.svg" alt="HODU"></h1>
+      <ul class="sns">
+        <li><a href="#"><img src="./img/icon-blog.png" alt="blog"></a></li>
+        <li><a href="#"><img src="./img/icon-insta.png" alt="insta"></a></li>
+        <li><a href="#"><img src="./img/icon-facebook.png" alt="facebook"></a></li>
+        <li><a href="#"><img src="./img/icon-youtube.png" alt="youtube"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="modal-wrap">
+    <div class="modal-content">
+      <img src="./img/hodu-modal.png" alt="호두 사랑해">
+      <h2>Thank you!</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing industry. </p>
+      <button type="button" class="btn" id="modal-btn">OK! I Love HODU</button>
+    </div>
+</div>
+  
+  <!-- JavaScript -->
+  <script>
+    const modal = document.getElementById("modal-wrap")
+    const btnModal = document.getElementById("subscribe-btn")
+    btnModal.addEventListener("click", e => {
+        modal.style.display = "block"
+    })
+    // const closeBtn = modal.getElementById("modal-btn")
+    // closeBtn.addEventListener("click", e => {
+    //     modal.style.display = "none"
+    // })
+  </script>
+</body>
+</html>
