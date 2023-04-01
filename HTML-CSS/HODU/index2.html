@@ -9,18 +9,19 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
   <header>
     <div class="wrap">
       <h1 class="logo">
-        <a href="#"><img src="./img/Logo.svg" alt="HODU"></a>
+        <a href=""><img src="./img/Logo.svg" alt="HODU"></a>
       </h1>
       <nav class="nav">
         <ul class="nav-ul">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Support</a></li>
         </ul>
         <button type="button" class="btn">Download</button>
       </nav>
@@ -75,7 +76,7 @@
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
             Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
-          <a href="#" class="btn">Learn More</a>
+          <a href="" class="btn">Learn More</a>
         </div>
       </section>
       <article class="subscribe">
@@ -94,40 +95,32 @@
     </div>
   </section>
   <div class="hodu-bg">
-    <button type="button" class="up-btn"></button>
+    <a href="" class="up-btn"></a>
   </div>
   <footer>
     <div class="wrap">
       <h1><img src="./img/Logo.svg" alt="HODU"></h1>
       <ul class="sns">
-        <li><a href="#"><img src="./img/icon-blog.png" alt="blog"></a></li>
-        <li><a href="#"><img src="./img/icon-insta.png" alt="insta"></a></li>
-        <li><a href="#"><img src="./img/icon-facebook.png" alt="facebook"></a></li>
-        <li><a href="#"><img src="./img/icon-youtube.png" alt="youtube"></a></li>
+        <li><a href=""><img src="./img/icon-blog.png" alt="blog"></a></li>
+        <li><a href=""><img src="./img/icon-insta.png" alt="insta"></a></li>
+        <li><a href=""><img src="./img/icon-facebook.png" alt="facebook"></a></li>
+        <li><a href=""><img src="./img/icon-youtube.png" alt="youtube"></a></li>
       </ul>
     </div>
   </footer>
 
-  <div id="modal-wrap">
-    <div class="modal-content">
-      <img src="./img/hodu-modal.png" alt="호두 사랑해">
-      <h2>Thank you!</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing industry. </p>
-      <button type="button" class="btn" id="modal-btn">OK! I Love HODU</button>
+  <div id="modal-bg">
+    <div id="modal-wrap" class="hidden">
+      <div class="modal-content">
+        <img src="./img/hodu-modal.png" alt="호두 사랑해">
+        <h2>Thank you!</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing industry. </p>
+        <button type="button" class="btn" id="modal-btn">OK! I Love HODU</button>
+      </div>
     </div>
-</div>
+  </div>
   
-  <!-- JavaScript -->
-  <script>
-    const modal = document.getElementById("modal-wrap")
-    const btnModal = document.getElementById("subscribe-btn")
-    btnModal.addEventListener("click", e => {
-        modal.style.display = "block"
-    })
-    // const closeBtn = modal.getElementById("modal-btn")
-    // closeBtn.addEventListener("click", e => {
-    //     modal.style.display = "none"
-    // })
-  </script>
+<!-- JavaScript -->
+<script src="./script/script.js"></script>
 </body>
 </html>

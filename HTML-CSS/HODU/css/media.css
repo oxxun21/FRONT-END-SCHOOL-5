@@ -1,0 +1,157 @@
+@media (max-width: 520px) {
+  .wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  header .nav {
+    display: none;
+  }
+
+  main .wrap {
+    flex-direction: column;
+  }
+
+  main .main-left {
+    gap: 30px;
+  }
+
+  main .main-left h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  main .main-left p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  main .main-left .btn {
+    align-self: center;
+  }
+
+  .main-right {
+    margin-top: 30px;
+  }
+
+  .main-right img {
+    max-width: 197px;
+  }
+
+  .section1 {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .section1-img {
+    min-width: 326px;
+  }
+
+  .section1-content h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 40px;
+  }
+
+  .section1-content p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 20px;
+  }
+
+  .section2 {
+    padding: 0 0 50px 0;
+  }
+
+  .section2-title h3 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .section2-title p {
+    font-size: 16px;
+    line-height: 20px;
+    width: 90%;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .section2-img ul {
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .section2-img ul li img {
+    padding: 40px 0 60px;
+    max-width: 260px;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+    border-radius: 18px;
+  }
+
+  .section2-content {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section2-content p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .section2-content a {
+    align-self: flex-end;
+  }
+
+  .subscribe {
+    padding: 36px 32px;
+    flex-direction: column;
+  }
+
+  .subscribe-content {
+    width: inherit;
+  }
+
+  .subscribe-content p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #F2E9D8;
+  }
+
+  .subscribe-form {
+    width: inherit;
+    flex-direction: column;
+  }
+
+  .subscribe-form input {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .subscribe-form .btn {
+    margin-top: 20px;
+    position: static;
+    align-self: flex-end;
+  }
+
+  .hodu-bg .up-btn {
+    display: none;
+  }
+
+  footer h1 {
+    width: 112px;
+  }
+
+  footer .sns {
+    gap: 5px;
+  }
+}

@@ -132,7 +132,7 @@ main .main-left .btn {
 }
 
 .section2 {
-  padding: 40px 0;
+  padding: 40px 0 90px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -167,7 +167,9 @@ main .main-left .btn {
 
 .section2-img ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .section2-img ul li img {
@@ -196,16 +198,16 @@ main .main-left .btn {
 .subscribe {
   background: #263140;
   border-radius: 30px;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  margin-top: 50px;
   padding: 50px 58px;
   box-sizing: border-box;
   color: #fff;
-  z-index: 9999;
+  z-index: 10;
+  margin-bottom: -100px;
+  position: relative;
 }
 
 .subscribe-content {
@@ -225,6 +227,11 @@ main .main-left .btn {
   line-height: 18px;
 }
 
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+
 .subscribe-form input {
   width: 480px;
   height: 60px;
@@ -234,16 +241,16 @@ main .main-left .btn {
   box-sizing: border-box;
   border: none;
   background: #FFFFFF url(../img/mail.svg) no-repeat 30px center / 24px;
+  position: relative;
 }
 
 .subscribe-form .btn {
   position: absolute;
   right: 65px;
-  top: 75px;
 }
 
 .hodu-bg {
-  margin-top: 160px;
+  /* margin-top: 100px; */
   height: 340px;
   background: url(../img/hodu-bg.png) no-repeat center center / cover;
   position: relative;
@@ -267,7 +274,7 @@ main .main-left .btn {
   border-width: 3px 3px 0 0;
   position: absolute;
   top: 22px;
-  left: 19px;
+  left: 18px;
   width: 10px;
   height: 10px;
   transform: rotate(-45deg);
@@ -298,8 +305,19 @@ footer .sns {
   gap: 20px;
 }
 
+#modal-bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  display: none;
+  position: fixed;
+  left: 0; 
+  top: 0;
+}
+
 #modal-wrap {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
