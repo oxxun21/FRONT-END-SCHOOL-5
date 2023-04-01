@@ -26,7 +26,7 @@ a {
 }
 
 .btn {
-  padding: 15px 30px;
+  padding: 15px 29px;
   background: #D97652;
   color: #fff;
   font-weight: 700;
@@ -34,6 +34,12 @@ a {
   border-radius: 40px;
   font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background:#fff;
+  color: #D97652;
 }
 
 header, main {
@@ -67,14 +73,20 @@ header .nav-ul li {
   display: inline-block;
 }
 
+header .nav-ul li:hover a {
+  color: #D97652;
+}
+
 header .nav-ul li a {
   padding: 15px;
+  transition: all 0.3s;
 }
 
 main .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 main .main-left {
@@ -109,7 +121,7 @@ main .main-left .btn {
 }
 
 .section1-img {
-  min-width: 600px;
+  min-width: 326px;
   filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
 }
 
@@ -168,11 +180,15 @@ main .main-left .btn {
 .section2-img ul {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   gap: 30px;
 }
 
+.section2-img ul li {
+  min-width: 260px;
+}
+
 .section2-img ul li img {
+  width: 100%;
   filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
   border-radius: 30px;
 }
@@ -180,7 +196,6 @@ main .main-left .btn {
 .section2-content {
   display: flex;
   margin-top: 90px;
-  gap: 50px;
   justify-content: center;
 }
 
@@ -190,9 +205,9 @@ main .main-left .btn {
 }
 
 .section2-content a {
-  padding: 15px 35px;
   height: 50px;
   box-sizing: border-box;
+  margin-left: 50px;
 }
 
 .subscribe {
@@ -211,7 +226,7 @@ main .main-left .btn {
 }
 
 .subscribe-content {
-  width: 490px;
+  max-width: 490px;
 }
 
 .subscribe-content h3 {
@@ -278,6 +293,7 @@ main .main-left .btn {
   width: 10px;
   height: 10px;
   transform: rotate(-45deg);
+  transition: all 0.3s;
 }
 
 .hodu-bg .up-btn:hover::before {
@@ -317,15 +333,15 @@ footer .sns {
 }
 
 #modal-wrap {
+  max-width: 600px;
+  width: 100%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
   display: none;
-  width: 600px;
-  height: 400px;
-  background: url(../img/modal-bg.png) no-repeat center center / contain;
+  background: url(../img/modal-bg.png) no-repeat center center / cover;
   filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.4));
   border-radius: 30px;
 }
@@ -350,6 +366,7 @@ footer .sns {
   font-weight: 400;
   font-size: 14px;
   margin-top: 12px;
+  text-align: center;
 }
 
 .modal-content .btn#modal-btn {
