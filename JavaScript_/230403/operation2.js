@@ -44,7 +44,7 @@ console.log(username) // "이름을 입력하지 않으신 분"
 
 let username2 = "hailey";
 username2 = username2 || "이름을 입력하지 않으신 분"
-console.log(username) //username2 튀어나옴
+console.log(username2) // "hailey"
 
 //or 은 하나라도 true라면 true로 처리 => 앞에꺼 나옴 / false일 경우 뒤에꺼 출력
 
