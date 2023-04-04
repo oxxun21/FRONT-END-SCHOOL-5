@@ -35,9 +35,9 @@ arr[0] = 100
 
 // 2. 배열에 다른 원시타입과 객체타입을 포함할 수 있습니다.
 const arr = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ]
 
 arr[0]
@@ -53,14 +53,14 @@ arr[1][2]
 const a = 10 // 스칼라
 const b = [10, 20, 30] // 벡터
 const c = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ] // 메트릭스
 const d = [
-    [[1, 2], [1, 2], [1, 2]],
-    [[1, 2], [1, 2], [1, 2]],
-    [[1, 2], [1, 2], [1, 2]]
+  [[1, 2], [1, 2], [1, 2]],
+  [[1, 2], [1, 2], [1, 2]],
+  [[1, 2], [1, 2], [1, 2]]
 ] // 텐서(3차원 이상의 다차원)
 
 // 그렇기에 인공지능 중 가장 유명한 라이브러리 텐서플로우는 결국 다차원 행렬의 연산입니다. 
@@ -160,7 +160,6 @@ const arr = [10, 20, 30, 40, 50]
 arr.splice(2)
 arr
 
-
 // arr.slice(start, end)
 const myArray = ["apple", "banana", "cherry", "durian", "elderberry"]
 console.log(myArray.slice(1, 4))
@@ -175,20 +174,20 @@ myArray.slice(0, 100)
 const arr = [10, 20, 30, 40, 50]
 // arr.forEach(함수)
 // 함수(callbackfn): (value: number, index: number, array: number[]
-arr.forEach(function(item, index){
-    console.log(index, item)
+arr.forEach(function (item, index) {
+  console.log(index, item)
 })
 
-arr.forEach(function(item, index){
-    console.log(index, item)
-    console.log('hello')
-    console.log('world')
+arr.forEach(function (item, index) {
+  console.log(index, item)
+  console.log('hello')
+  console.log('world')
 })
 
-arr.forEach(function(item, index, arr){
-    console.log(index, item, arr)
-    console.log('hello')
-    console.log('world')
+arr.forEach(function (item, index, arr) {
+  console.log(index, item, arr)
+  console.log('hello')
+  console.log('world')
 })
 
 // 실무에서 사용하는 코드는 아닙니다.
@@ -216,22 +215,22 @@ const arr2 = []
 const arr = Array(100).fill(0)
 const arr2 = []
 
-function hojun(item, index){
-    arr2.push(index+1)
+function hojun(item, index) {
+  arr2.push(index + 1)
 }
 
 arr.forEach(hojun)
 
 // 어제 진행했었던 코드
 fetch('http://test.api.weniv.co.kr/mall')
-    .then(data => data.json())
-    .then(data => {
-        data.forEach(item => {
-            console.log(item.thumbnailImg)
-            console.log(item.productName)
-            console.log(item.price)
-        })
+  .then(data => data.json())
+  .then(data => {
+    data.forEach(item => {
+      console.log(item.thumbnailImg)
+      console.log(item.productName)
+      console.log(item.price)
     })
+  })
 
 // https://caniuse.com/?search=forEach
 // nodeList에서 forEach와 Array에서 forEach는 다릅니다.
@@ -241,14 +240,14 @@ const avengers = ['spiderman', 'ironman', 'hulk', 'thor'];
 
 const newAvengers = [];
 avengers.forEach(function (item) {
-    newAvengers.push('💖' + item + '💖');
+  newAvengers.push('💖' + item + '💖');
 });
 console.log(newAvengers)
 
 // map (데이터를 뽑는 용도로 많이 사용)
 // map은 새로운 배열을 생성한다. (forEach는 함수를 넣어서 반환)
 const arr = [1, 2, 3]
-arr.map(function(x){
+arr.map(function (x) {
   return x ** 2
 })
 
@@ -270,18 +269,18 @@ let tip4 = [10, 20, 30, 40, 50]
 console.log([...tip3, 1000, ...tip4])
 
 const tip5 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ]
 
 // 다차원 배열에서 최솟값, 최댓값 찾기
 Math.max(...tip5.flat())
 
 const tip6 = [
-    [[1, 2], [1, 2], [1, 2]],
-    [[1, 2], [1, 2], [1, 2]],
-    [[1, 2], [1, 2], [1, 2]]
+  [[1, 2], [1, 2], [1, 2]],
+  [[1, 2], [1, 2], [1, 2]],
+  [[1, 2], [1, 2], [1, 2]]
 ]
 
 tip6.flat()
@@ -304,7 +303,7 @@ tip10
 
 const tip11 = Array(100).fill(0).map((v, i) => i + 1);
 
-const tip12 =[
+const tip12 = [
   {
     "_id": "642ba3980785cecff3f39a8d",
     "index": 0,

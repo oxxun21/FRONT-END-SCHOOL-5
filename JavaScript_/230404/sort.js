@@ -10,20 +10,20 @@ console.log(nums1.sort((a, b) => a - b)); // 오름차순
 console.log(nums1.sort((a, b) => b - a)); // 내림차순
 
 // 실무사용코드
-function sort(key){
-  if (click){
-      click = false
-      var sortedData = jsonData.sort((a, b) => (a[key] < b[key] ? -1 : (a[key] > b[key] ? 1 : 0)))
+function sort(key) {
+  if (click) {
+    click = false
+    var sortedData = jsonData.sort((a, b) => (a[key] < b[key] ? -1 : (a[key] > b[key] ? 1 : 0)))
   }
-  else{
-      click = true
-      var sortedData = jsonData.sort((a, b) => (a[key] > b[key] ? -1 : (a[key] < b[key] ? 1 : 0)))
+  else {
+    click = true
+    var sortedData = jsonData.sort((a, b) => (a[key] > b[key] ? -1 : (a[key] < b[key] ? 1 : 0)))
   }
 }
 
 // 작동되는거 확인
 const nums2 = [3, 1, 11, 8, 6];
-console.log(nums.sort((a , b) => {
-    console.log(a, b)
-    console.log(a - b)
+console.log(nums.sort((a, b) => {
+  console.log(a, b)
+  console.log(a - b)
 }));
