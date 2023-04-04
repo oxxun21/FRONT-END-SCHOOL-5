@@ -4,7 +4,7 @@ arr[0] = 100 // const는 값의 변화가 안된다고 하지 않았나? => muta
 // arr = 100
 // arr = [10, 20, 30]
 console.log(arr)
-console.dir(arr) // 프러퍼티와 메서를 볼 수 있습니다.
+console.dir(arr) // 프로퍼티와 메서드를 볼 수 있습니다.
 
 
 // arr.1 // error
