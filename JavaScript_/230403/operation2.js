@@ -96,8 +96,9 @@ let height = 0;
 // height 가 없다면 100을 넣고 싶음
 console.log(height || 100);   // 100
 console.log(height ?? 100);   // 0 => height가 null이 아니기 때문에 값 출력
-// || : 0, null, undefined
+
+// || : 0, null, undefined, false, NaN, '', etc...
 // ?? : null, undefined
 
-// falsy : 0, -0, "", null, undefined, NaN
-// nullish : null, undefined
+// falsy하다 : 0, null, undefined, false, NaN, '', etc...
+// nullish하다 : null, undefined
