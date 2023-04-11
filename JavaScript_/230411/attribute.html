@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <!-- // 요소의 스타일을 제어하는 style 객체 -->
+  <span>Hello</span>
+
+  <!-- // 속성에 접근하고 수정할 수 있는 Attribute 메소드 -->
+  <p id='myTxt'>hello lions</p>
+  <img src='https://static.ebs.co.kr/images/public/lectures/2014/06/19/10/bhpImg/44deb98d-1c50-4073-9bd7-2c2c28d65f9e.jpg'>
+
+  <!-- // 요소에 데이터를 저장하도록 도와주는 data 속성 -->
+  <img
+  class="terran battle-cruiser"
+  src="battle-cruiser.png"
+  data-ship-id="324"
+  data-weapons="laser"
+  data-health="400"
+  data-mana="250"
+  data-skill="yamato-cannon"
+  />
+
+  <!-- JavaScript -->
+  <script>
+    // 요소의 스타일을 제어하는 style 객체
+    const target = document.querySelector("span");
+    const txtColor = target.style.color; // 현재 스타일 정보를 가져옵니다.
+    target.style.color = "red"; // 현재 스타일 정보를 변경합니다.
+    target.style.fontWeight = "bold"; // 현재 스타일 정보에 font-weight 속성이 없다면 추가합니다.
+    // target.style.color = null; // 현재 스타일 정보를 제거(초기화)합니다.
+
+    // 속성에 접근하고 수정할 수 있는 Attribute 메소드
+    // 1. getAttribute 메소드는 요소의 특정 속성 값에 접근할 수 있도록 합니다.
+    // 2. setAttribute 메소드는 요소의 특정 속성 값에 접근하여 값을 수정합니다.
+    const target = document.querySelector('p');
+    const myimg = document.querySelector('img');
+    const idAttr = target.getAttribute('id');
+    console.log(idAttr);
+    myimg.setAttribute("src", "https://img.wendybook.com/image_detail/img159/159599_01.jpg");
+
+    // 요소에 데이터를 저장하도록 도와주는 data 속성
+    console.log(target.dataset);
+    console.log(target.dataset.shipId);
+  </script>
+</body>
+
+</html>
