@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+
+    <!-- CSS -->
+    <style>
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background: white;
+        height: 80px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: lightblue;
+      }
+    </style>
+</head>
+<body>
+  <section>
+    <label for="background">배경색 : </label>
+    <input id="background" type="color">
+    <label for="text">글씨색 : </label>
+    <input id="text" type="color">
+  </section>
+  <main>
+    <h1>Color Picker</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius asperiores, architecto quae optio beatae quaerat mollitia nobis possimus animi eum voluptas accusamus doloremque quam ducimus! Aliquam nobis recusandae adipisci veniam!
+    </p>
+  </main>
+  
+  <!-- JavaScript -->
+  <script>
+    const bg = document.querySelector("#background");
+    const text = document.querySelector("#text");
+    const body = document.querySelector("body");
+    const h1 = document.querySelector("h1");
+    const p = document.querySelector("p");
+    
+    bg.addEventListener('input', () => {
+      let bgColor = bg.value;
+      body.style.background = bgColor; 
+    })
+    text.addEventListener('input', () => { 
+      let textColor = text.value;
+      h1.style.color = textColor; 
+      p.style.color = textColor; 
+    })
+  </script>
+</body>
+</html>
