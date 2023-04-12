@@ -43,7 +43,7 @@ function 값변경2(value){
   value = 1000
 }
 값변경2(test2)
-console.log(test2); // [100, 20, 30] 변경 X
+console.log(test2); // 100 출력 변경 X
 
 // call by ref가 없는 반례
 var a = {}; 
