@@ -86,3 +86,32 @@ let hour = today.getHours();
 let minute = today.getMinutes();
 let second = today.getSeconds();
 const ampm = hour >= 12 ? 'PM' : 'AM';
+
+/////////////// 17일 내용 추가
+// 날짜의 차를 구하는 코드
+// getTime은 1970 년 1 월 1 일 00:00:00 UTC와 주어진 날짜 사이의 경과 시간 (밀리 초)을 나타내는 숫자
+function getDateDiff(d1, d2) {
+  const date1 = new Date(d1);
+  const date2 = new Date(d2);
+  const diffDate = date1.getTime() - date2.getTime();
+  // 일 == 밀리세컨 * 초 * 분 * 시
+  return Math.abs(diffDate / (1000 * 60 * 60 * 24));
+}
+
+getDateDiff("2023-02-27", "2023-06-30");
+getDateDiff("2023-04-17", "2023-06-30");
+
+// 두 날짜의 차를 계산합니다.
+function daysBetween(date1, date2) {
+  // 밀리초 단위로 두 날짜의 차이를 계산합니다.
+  const diff = Math.abs(date1.getTime() - date2.getTime());
+  // 1일은 24시간 * 60분 * 60초 * 1000밀리초입니다.
+  const oneDay = 24 * 60 * 60 * 1000;
+  // 차이를 1일 밀리초로 나눕니다.
+  return Math.floor(diff / oneDay);
+}
+
+// 예시
+const date1 = new Date("2021-01-01");
+const date2 = new Date("2021-01-05");
+console.log(daysBetween(date1, date2)); // 4
