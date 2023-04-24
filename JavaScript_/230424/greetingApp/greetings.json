@@ -1,0 +1,12 @@
+{
+  "greeing" : [
+    {
+      "userName" : "lee",
+      "greetings" : "하이"
+    },
+    {
+      "userName" : "won",
+      "greetings" : "반갑다람쥐"
+    }
+  ]
+}
