@@ -9,7 +9,7 @@ requestObj.onreadystatechange = () => { // readystate 가 변화하면 실행되
     // 2 (HEADERS_RECEIVED) - send()함수가 호출되었습니다.
     // 3 (LOADING) - 데이터를 다운받는 중 입니다.
     // 4 (DONE) - 통신이 완료되었습니다.
-    if (requestObj.readyState == 4 && requestObj.status == "200") {
+    if (requestObj.readyState === 4 && requestObj.status === 200) {
 
         const result = requestObj.responseText;
 
