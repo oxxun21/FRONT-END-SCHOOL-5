@@ -1,0 +1,17 @@
+.listArea {
+  list-style: none;
+  padding: 0;
+}
+
+.listItem {
+  border: 1px solid black;
+}
+
+.listItem + .listItem {
+  border-top: none;
+}
+
+.listItem.active {
+  background-color: royalblue;
+  color: aliceblue;
+}
