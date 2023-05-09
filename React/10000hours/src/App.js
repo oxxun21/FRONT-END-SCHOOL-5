@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Input from "./components/Input";
+import MainInput from "./components/MainInput";
 import Display from './components/Display';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={job}
             onChange={userJob} />
-      <Input />
+      <MainInput />
       {click ? <Display /> : ""}
     </div>
   );
