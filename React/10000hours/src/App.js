@@ -7,23 +7,34 @@ function App() {
   const [time, setTime] = useState("");
 
   const [click, setClick] = useState(false);
+  const [modal, setModal] = useState(false);
 
-  const userJob = event => {
-    setJob(event.target.value);
-    console.log(event.target.value);
+  const userJob = e => {
+    setJob(e.target.value);
   };
 
+  const userTime = e => {
+    setTime(e.target.value);
+  };
+
+  const closeModal = () => {
+    setModal(false);
+  };
+
+  const openModal = () => {
+    setModal(true);
+  }
 
   return (
     <div>
-      <input className="login_id"
-            type="text"
-            placeholder="전화번호, 사용자 이름 또는 이메일"
-            value={job}
-            onChange={userJob} />
-      <MainInput />
-      {click ? <Display /> : ""}
+      <MainInput setClick={setClick} userJob={userJob} userTime={userTime} job={job} time={time} />
+      {click && <Display job={job} time={time} closeModal={closeModal} openModal={openModal} modal={modal} />}
     </div>
   );
 }
 export default App;
+
+// 1. 시간 변환
+// 2. 로딩 표시
+// 3. url 복사
+// 4. 코드 리팩토링

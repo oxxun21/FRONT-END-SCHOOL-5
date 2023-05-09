@@ -35,11 +35,81 @@ body {
   
 }
 
+#wrap {
+  width: 60%;
+  margin: 0 auto;
+}
+
 #root {
-  margin: 50px 0;
+  margin: 80px 0;
+}
+
+header h1 {
+  position: relative;
+  width: 550px;
+  z-index: 100;
+  text-align: center;
+  margin: 120px auto;
+}
+
+header h1 img {
+  width: 100%;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 9%;
+  left: 42.5%;
+  width: 230px;
+  height: 230px;
+  background: url(../img/clock.png) center center no-repeat;
 }
 
 .intro-up {
   font-family: 'OTEnjoystoriesBA';
   color:#F5DF4D;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro-down {
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: center;
+  position: relative;
+}
+
+.intro-down strong {
+  font-family: 'GmarketSansBold';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.intro-down::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 103%;
+  height: 100px;
+  background: url(../img/quotes.png) center center no-repeat;
+}
+
+footer h2 {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer h2 img {
+  width: 125px;
+}
+
+footer p {
+  font-size: 10px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 70px;
 }
