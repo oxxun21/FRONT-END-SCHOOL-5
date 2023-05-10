@@ -49,21 +49,16 @@ export default function display(props) {
     alert('할 줄 몰라용')
   }
 
-  // 계산해서 띄우기
-  // let calc = document.querySelector('#calc');
-  // let time = () => {
-  //   let num = parseInt((10000/props.time), 10)
-  //   let str = num.toString();
-  //   return str;
-  // };
-  
-  // calc.textContent = time();
+  const calculatedTime = props.time;
+  let time = () => {
+    return parseInt((10000/calculatedTime), 10).toString();
+  };
 
   return (
     <Div>
       <Span>당신은 <Strong>{props.job}</Strong> 전문가가 되기 위해서</Span>
       <br />
-      <Span>대략 <Strong id='calc'>00</Strong> 일 이상 훈련하셔야 합니다!</Span>
+      <Span>대략 <Strong id='calc'>{time()}</Strong> 일 이상 훈련하셔야 합니다!</Span>
 
       <BtnDiv>
         <Btn type='button' onClick={props.openModal}>훈련하러 가기 GO!GO!</Btn>

@@ -34,7 +34,7 @@ function App() {
 }
 export default App;
 
-// 1. 시간 변환
+// ~~1. 시간 변환~~
 // 2. 로딩 표시
 // 3. url 복사
 // 4. 코드 리팩토링

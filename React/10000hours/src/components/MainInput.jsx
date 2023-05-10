@@ -59,8 +59,8 @@ export default function MainInput(props) {
     if (props.time === "") {
       alert('숫자가 입력되지 않았습니다.');
       return props.setClick(false);
-    } else if (props.time > 24) {
-      alert('24 이하의 값을 입력해 주세요.');
+    } else if (1 > props.time || props.time > 24) {
+      alert('1~24 사이의 값을 입력해 주세요.');
       return props.setClick(false);
     }
 
@@ -77,7 +77,7 @@ export default function MainInput(props) {
       <div>
         <Span>그래서 앞으로 매일 하루에</Span>
         <Input id="inputTime" type="number" placeholder='예) 5' onChange={props.userTime} value={props.time} />
-        <Span>씩 훈련할 것이다.</Span>
+        <Span>시간 씩 훈련할 것이다.</Span>
       </div>
 
       <Btn type='submit' onClick={clickTrue}>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</Btn>
