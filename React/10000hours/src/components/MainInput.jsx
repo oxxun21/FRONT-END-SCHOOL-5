@@ -68,7 +68,7 @@ export default function MainInput(props) {
   }
 
   return (
-    <Form>
+    <Form onSubmit={clickTrue}>
       <div>
         <Span>나는</Span>
         <Input id="inputJob" type="text" placeholder='예) 프로그래밍' onChange={props.userJob} value={props.job} />
@@ -80,7 +80,7 @@ export default function MainInput(props) {
         <Span>시간 씩 훈련할 것이다.</Span>
       </div>
 
-      <Btn type='submit' onClick={clickTrue}>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</Btn>
+      <Btn type='submit'>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</Btn>
     </Form>
   )
 }

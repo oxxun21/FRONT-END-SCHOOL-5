@@ -8,14 +8,20 @@ function App() {
 
   const [click, setClick] = useState(false);
   const [modal, setModal] = useState(false);
+  const [day, setDay] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setDay(Math.ceil(10000 / time));
+  }
 
   const userJob = e => {
     setJob(e.target.value);
   };
 
-  const userTime = e => {
-    setTime(e.target.value);
-  };
+  // const userTime = e => {
+  //   setTime(e.target.value);
+  // };
 
   const closeModal = () => {
     setModal(false);
@@ -27,8 +33,8 @@ function App() {
 
   return (
     <div>
-      <MainInput setClick={setClick} userJob={userJob} userTime={userTime} job={job} time={time} />
-      {click && <Display job={job} time={time} closeModal={closeModal} openModal={openModal} modal={modal} />}
+      <MainInput setClick={setClick} userJob={userJob} setTime={setTime} job={job} time={time} />
+      {click && <Display job={job} time={time} closeModal={closeModal} openModal={openModal} modal={modal} day={day} />}
     </div>
   );
 }

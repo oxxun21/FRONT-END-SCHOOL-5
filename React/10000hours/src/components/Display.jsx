@@ -58,7 +58,7 @@ export default function display(props) {
     <Div>
       <Span>당신은 <Strong>{props.job}</Strong> 전문가가 되기 위해서</Span>
       <br />
-      <Span>대략 <Strong id='calc'>{time()}</Strong> 일 이상 훈련하셔야 합니다!</Span>
+      <Span>대략 <Strong id='calc'>{props.day}</Strong> 일 이상 훈련하셔야 합니다!</Span>
 
       <BtnDiv>
         <Btn type='button' onClick={props.openModal}>훈련하러 가기 GO!GO!</Btn>
