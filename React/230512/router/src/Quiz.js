@@ -28,6 +28,17 @@ const Products = () => {
   return (
     <>
       <h1>products page {id}</h1>
+      <Link to="./notice">Notice</Link>
+      {/* . 은 현재 경로를 나타냄 */}
+    </>
+  )
+}
+
+const ProductsNotice = () => {
+  const { id } = useParams();
+  return (
+    <>
+      <h1>products page {id} - notice</h1>
     </>
   )
 }
@@ -74,23 +85,26 @@ const Notice = () => {
 }
 
 export default function App() {
+  const productIds = [1, 2, 3, 4, 5];
   return (
     <BrowserRouter>
-      <Link to='/'>Index</Link><br />
-      <Link to='/products/1'>Products1</Link><br />
-      <Link to='/products/2'>Products2</Link><br />
+      <h1>퀴즈</h1>
+      <Link to="/">홈페이지</Link><br />
+      {productIds.map((productId) => (
+        <Link to={`/products/${productId}`}>상품{productId}</Link>
+      ))}<br />
       <Link to='/cart'>Cart</Link><br />
-      <Link to='/users/*'>Users</Link><br />
+      <Link to='/users/'>Users</Link><br />
       
       <Routes>
         <Route path='/' element={<Index />} />
         <Route path='/products/:id' element={<Products />} />
+        <Route path='/products/:id/notice' element={<ProductsNotice />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/users/*' element={<Users />}>
+        <Route path='/users/' element={<Users />}>
           <Route path='coupon/' element={<Coupon />} />
           <Route path='question/' element={<Question />} />
           <Route path='notice/' element={<Notice />} />
-          {/* 여기 이상한데 */}
         </Route>
       </Routes>
     </BrowserRouter>
