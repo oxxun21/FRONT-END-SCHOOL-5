@@ -56,6 +56,8 @@ export default function NationList() {
     fetchData();
   }, [url])
 
+  // useMemo는 부하가 심한 함수들을 똑같은 결과가 나온다는 것이 보장된다면 부하가 없이 결과를 띄우는 것 (리렌더링 X)
+  // useEffect는 렌더링을 한 이후에 렌더링의 상태를 조작하기 위함
 
   return (
     <Item>
@@ -72,7 +74,7 @@ export default function NationList() {
       </ul>
       <div>
         <button onClick={() => {setUrl("fetch주소?loc=europe")}}>유럽 목록</button> 
-        {/* ?loc=europe : 쿼리 */}
+        {/* ?loc=europe : json 서버에서 제공하는 기능 (쿼리), 특정 값에 해당하는 데이터를 보내라 */}
         <button onClick={() => {setUrl("fetch주소")}}>전체 목록</button>
       </div>
     </Item>
