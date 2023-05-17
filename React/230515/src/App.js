@@ -3,6 +3,7 @@ import Time from "./HookUseEffect/Time";
 import UseRefDom from "./HookUseRef/UseRefDom";
 import CounterRef from "./HookUseRef/CounterRef";
 import UseMemo from "./HookUseMemo/UseMemo";
+import MemoExample from "./HookUseMemo/MemoExample";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <Counter /> */}
       {/* <CounterRef /> */}
       {/* <UseRefDom /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
+      <MemoExample />
     </div>
   );
 }
