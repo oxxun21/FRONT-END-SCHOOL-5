@@ -12,13 +12,14 @@ export class SampleModel {
 		this.z = info.z || 0;
 
 		this.modelSrc = info.modelSrc;
+		this.name = info.name || 'Unknown';
 
 		this.rotationY = info.rotationY || 0;
 
 		this.gltfLoader.load(
 			this.modelSrc,
 			glb => {
-				// console.log(glb)
+				console.log(glb);
 				// 안전하게 그림자 만들기
 				glb.scene.traverse(child => {
 					if (child.isMesh) {
@@ -28,7 +29,7 @@ export class SampleModel {
 
 				this.mesh = glb.scene.children[0];
 				this.mesh.scale.set(this.scale, this.scale, this.scale);
-				this.mesh.castShadow = true;
+				// this.mesh.castShadow = true;
 				this.mesh.rotation.y = this.rotationY;
 				this.mesh.position.set(this.x, this.y, this.z);
 				this.scene.add(this.mesh);

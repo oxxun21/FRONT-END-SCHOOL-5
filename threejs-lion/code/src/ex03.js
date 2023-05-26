@@ -69,12 +69,12 @@ export default function example() {
 	const gui = new dat.GUI();
 	gui.add(box.position, 'y', -5, 5, 0.01).name('큐브 Y');
 	gui.add(camera.position, 'x', -10, 10, 0.01).name('카메라 X');
-	// gui
-	// 	.add(mesh.position, 'z')
-	// 	.min(-10)
-	// 	.max(3)
-	// 	.step(0.01)
-	// 	.name('메쉬의 Z 위치');
+	gui
+		.add(box.position, 'z')
+		.min(-10)
+		.max(3)
+		.step(0.01)
+		.name('메쉬의 Z 위치');
 
 	// 기기 성능 차이에 따른 애니메이션 속도 차이를 없애기 위해 three.js에서 제공하는 Clock 사용
 	const clock = new THREE.Clock();

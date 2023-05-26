@@ -64,9 +64,17 @@ export default function example() {
 	
 	// 5개의 SampleModel 인스턴스를 만들어 sampleModels 배열에 넣어 두기
 	const sampleModels = [];
-	sampleModels.push(new SampleModel({ modelSrc: '/models/iphone.glb', scene, gltfLoader, x: -5, z: 20 }));
-	sampleModels.push(new SampleModel({ modelSrc: '/models/iphone.glb', scene, gltfLoader, x: 7, z: 10 }));
-	sampleModels.push(new SampleModel({ modelSrc: '/models/iphone.glb', scene, gltfLoader, x: -10, z: 0 }));
+	sampleModels.push(
+		new SampleModel({
+			modelSrc: '/models/iphone.glb',
+			scene,
+			gltfLoader,
+			x: -5,
+			z: 20
+		})
+	);
+	sampleModels.push(new SampleModel({ name: 'Rocket', modelSrc: '/models/rocket.glb', scene, gltfLoader, x: 7, z: 10, y: 0.1 }));
+	sampleModels.push(new SampleModel({ modelSrc: '/models/trashcan.glb', scene, gltfLoader, x: -10, z: 0 }));
 	sampleModels.push(new SampleModel({ modelSrc: '/models/iphone.glb', scene, gltfLoader, x: 10, z: -10 }));
 	sampleModels.push(new SampleModel({ modelSrc: '/models/iphone.glb', scene, gltfLoader, x: -5, z: -20 }));
 
@@ -76,30 +84,47 @@ export default function example() {
 
 	function setSection() {
 		scrollY = window.scrollY; // window.pageYOffset;
+		// console.log(scrollY);
 
 		// 스크롤 위치를 기준으로, 활성화시킬 섹션 번호를 세팅
 		const newSection = Math.round(scrollY / window.innerHeight);
+		// console.log(newSection);
+		// console.log(scrollY / window.innerHeight);
 		
 		if (newSection != currentSection) {
 			// 섹션 번호가 바뀔 경우 애니메이션 재생
 			// GSAP 라이브러리 이용
 			currentSection = newSection;
+
 			gsap.to(camera.position, {
 				duration: 1,
 				delay: 0,
 				x: sampleModels[currentSection].x,
 				z: sampleModels[currentSection].z + 5
 			});
+
 			if (sampleModels[currentSection].mesh) {
-				gsap.from(
-					sampleModels[currentSection].mesh.rotation,
-					{
-						duration: 2,
-						x: '+=0',
-						y: `+=${Math.PI * 4}`,
-						z: '+=0'
-					}
-				);
+				if (sampleModels[currentSection].name === 'Rocket') {
+					gsap.from(
+						sampleModels[currentSection].mesh.rotation,
+						{
+							duration: 2,
+							x: '+=0',
+							y: '+=0',
+							z: `+=${Math.PI * 4}`
+						}
+					);
+				} else {
+					gsap.from(
+						sampleModels[currentSection].mesh.rotation,
+						{
+							duration: 2,
+							x: '+=0',
+							y: `+=${Math.PI * 4}`,
+							z: '+=0'
+						}
+					);
+				}
 			}
 		}
 	}

@@ -13,7 +13,7 @@ export default function example() {
 	renderer.setSize(window.innerWidth, window.innerHeight); // 렌더러 크기를 브라우저 창 크기로
 	renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1); // 고해상 디스플레이 지원
 	renderer.shadowMap.enabled = true; // 그림자가 생기도록
-''
+
 	// ----- Scene
 	const scene = new THREE.Scene();
 	// 배경색 설정
@@ -27,8 +27,12 @@ export default function example() {
 		0.1, // near(가까이 보이는 한계)
 		1000 // far(멀리 보이는 한계)
 	);
-	camera.position.set(0, 1, 5); // 카메라 위치
+	camera.position.set(1, 2, 2); // 카메라 위치
+	// camera.position.x = -2;
+	// camera.position.y = 2;
+	// camera.position.z = 5;
 	scene.add(camera);
+	camera.lookAt(0, 0, 0);
 
 	// ----- Light(조명)
 	// 은은한 조명
@@ -50,7 +54,8 @@ export default function example() {
 		})
 	);
 	floor.receiveShadow = true; // 표면에 그림자가 생길 수 있도록
-	floor.rotation.x = -Math.PI * 0.5; // Math.PI는 180도
+	// floor.rotation.x = -Math.PI * 0.5; // Math.PI는 180도
+	floor.rotation.x = THREE.MathUtils.degToRad(-90);
 
 	const box = new THREE.Mesh(
 		new THREE.BoxGeometry(1, 1, 1),

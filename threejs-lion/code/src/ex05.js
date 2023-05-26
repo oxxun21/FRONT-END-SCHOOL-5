@@ -39,7 +39,7 @@ export default function example() {
 
 	// Controls
 	const controls = new OrbitControls(camera, renderer.domElement);
-	// controls.enableDamping = true;
+	controls.enableDamping = true;
 	// controls.enableZoom = false;
 	// controls.maxDistance = 10;
 	// controls.minDistance = 3;
@@ -47,8 +47,8 @@ export default function example() {
 	// controls.minPolarAngle = THREE.MathUtils.degToRad(45);
 	// controls.maxPolarAngle = THREE.MathUtils.degToRad(135);
 	// controls.target.set(2, 2, 2);
-	// controls.autoRotate = true;
-	// controls.autoRotateSpeed = 50;
+	controls.autoRotate = true;
+	// controls.autoRotateSpeed = 10;
 
 
 	// Mesh

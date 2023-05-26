@@ -12,7 +12,6 @@ export default function example() {
 	});
 	renderer.setSize(window.innerWidth, window.innerHeight); // 렌더러 크기를 브라우저 창 크기로
 	renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1); // 고해상 디스플레이 지원
-	console.log(window.devicePixelRatio);
 	renderer.shadowMap.enabled = true; // 그림자가 생기도록
 
 	// ----- Scene
@@ -72,8 +71,8 @@ export default function example() {
 		const delta = clock.getDelta(); // draw 실행 시간 간격
 		const time = clock.getElapsedTime(); // 총 경과 시간
 
-		box.rotation.y += 0.01;
-		// box.rotation.y += delta;
+		// box.rotation.y += 0.01;
+		box.rotation.y += delta * 10;
 		// box.rotation.y = time;
 		// box.rotation.y += 0.01; // Radian: 2PI가 360도
 		// 기기 성능 차이에 따른 애니메이션 속도 차이를 없애기 위해 Clock의 delta 사용
