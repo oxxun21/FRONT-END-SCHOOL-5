@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
 // function Button({ children, ...props }) {
 //   // { children, ...props } = 입력받은거
@@ -8,6 +8,12 @@ import React, { useState } from 'react'
 //     </button>
 //   );
 // }
+
+function ShowNum() {
+  const numContext = useContext(NumContext)
+
+  return <div>{numContext.num}</div>
+}
 
 function Button(props) {
   // props {onClick:  실행시키면num증가}
@@ -20,12 +26,20 @@ function Button(props) {
         height: "50px"
       }}
     >
+      <ShowNum />
       {props.children}
     </button>
   )
 }
 
+function ShowDubble() {
+  const numContext = useContext(NumContext)
+
+  return <div>{numContext.num * 2}</div>
+}
+
 function Counter(props) {
+  const numContext = useContext(NumContext)
   //아래에 span 안의 여기 숫자 0 부분에서 0을 변수로 만들어주세요
   // 버튼에 클릭이 되었습니다 라고 로그가 찍히는 이벤트를 넣고싶습니다.
 
@@ -35,34 +49,53 @@ function Counter(props) {
   // 1.1 num은 바뀌면 화면도 같이 바뀌는 변수임
   // 2. 이때 num = 1 형식으로 바꿀 수 없음
   // 3. 그래서 num을 바꾸기 위해서 setNum이라는 함수를 사용
-  const 실행시키면num증가 = () => {
-    props.setNum(props.num + 1);
-  };
-  const 실행시키면num감소 = () => {
-    props.setNum(props.num - 1);
-  };
+  // const 실행시키면num증가 = () => {
+  //   props.setNum(numContext.num + 1);
+  // };
+  // const 실행시키면num감소 = () => {
+  //   props.setNum(numContext.num - 1);
+  // };
   // jsx안에서 값을 사용하고싶으면 {} 중괄호로 감싸라!
 
   return (
     <>
-      <span>여기 숫자 {props.num}</span>
+      <span>여기 숫자 {numContext.num}</span>
       <div>
         <span>이름:ㅇㅇㅇ</span>
       </div>
-      <Button onClick={실행시키면num증가}>+</Button>
-      <Button onClick={실행시키면num감소}>-</Button>
+      <Button onClick={numContext.더하기}>+</Button>
+      <Button onClick={numContext.빼기}>-</Button>
     </>
   );
 }
 
-export default function App() {
+const NumContext = createContext();
+
+function NumContextProvider({ children }) {
   const [num, setNum] = useState(0);
   // 전달해줄수 없는 컴포넌트가 생겼을 때 공통 부모에서 관리하도록 하고 싶을 때 상태 끌어올리기 사용
+  const 더하기 = () => {
+    setNum(num + 1)
+  }
+  const 빼기 = () => {
+    setNum(num - 1)
+  }
+
+  const data = { num: num, 더하기: 더하기, 빼기: 빼기 }
+
   return (
-    <>
+    <NumContext.Provider value={data}>
+      {children}
+    </NumContext.Provider>
+  )
+}
+
+export default function App() {
+  return (
+    <NumContextProvider>
       <h1>숫자 카운터 만들기</h1>
-      <Counter num={num} setNum={setNum} />
-      <div>{num * 2}</div>
-    </>
+      <Counter />
+      <ShowDubble />
+    </NumContextProvider>
   );
 }
